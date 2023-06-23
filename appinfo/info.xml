@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<info xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+    <!--
+    SPDX-FileCopyrightText: Marcel Klehr <mklehr@gmx.net>
+    SPDX-License-Identifier: CC0-1.0
+    -->
+    <id>llm</id>
+    <name>Llm</name>
+    <summary>A large language model in nextcloud</summary>
+    <description><![CDATA[
+A large language model in Nextcloud
+
+This app integrates a locally running GPT4All running on CPU into Nextcloud
+using the LanguageModel API introduced in Nextcloud v28
+]]></description>
+    <version>0.0.1</version>
+    <licence>agpl</licence>
+    <author mail="mklehr@gmx.net" homepage="https://marcelklehr.de">Marcel Klehr</author>
+    <namespace>Llm</namespace>
+    <category>tools</category>
+    <bugs>https://github.com/nextcloud/llm/issues</bugs>
+    <dependencies>
+        <nextcloud min-version="28" max-version="28"/>
+    </dependencies>
+
+    <repair-steps>
+        <post-migration>
+            <step>OCA\Llm\Migration\InstallDeps</step>
+        </post-migration>
+        <install>
+            <step>OCA\Llm\Migration\InstallDeps</step>
+        </install>
+    </repair-steps>
+
+    <commands>
+        <command>OCA\Llm\Command\Summarize</command>
+    </commands>
+
+</info>
