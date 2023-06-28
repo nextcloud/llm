@@ -30,7 +30,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
 			<p>
 				<NcTextField :value.sync="settings['threads']"
 					:label-visible="true"
-					:label="t('llm', 'The number of threads to use')"
+					:label="t('llm', 'The number of threads to use for inference (more is faster)')"
 					@update:value="onChange" />
 			</p>
 		</NcSettingsSection>
