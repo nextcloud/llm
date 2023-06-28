@@ -26,7 +26,7 @@ class Summarize extends Command {
 	 * @return void
 	 */
 	protected function configure() {
-		$this->setName('summarize')
+		$this->setName('llm:summarize')
 			->setDescription('Summarizes the input')
 			->addArgument('input');
 	}

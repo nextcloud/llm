@@ -37,4 +37,9 @@ using the LanguageModel API introduced in Nextcloud v28
         <command>OCA\Llm\Command\Summarize</command>
     </commands>
 
+    <settings>
+        <admin>OCA\Llm\Settings\AdminSettings</admin>
+        <admin-section>OCA\Llm\Settings\AdminSection</admin-section>
+    </settings>
+
 </info>

@@ -6,20 +6,18 @@ declare(strict_types=1);
 
 namespace OCA\Llm\Migration;
 
+use OCA\Llm\Service\SettingsService;
 use OCP\IConfig;
 use OCP\Migration\IOutput;
 use OCP\Migration\IRepairStep;
 use Psr\Log\LoggerInterface;
 
 class InstallDeps implements IRepairStep {
-	protected IConfig $config;
-	private string $pythonDir;
-	private LoggerInterface $logger;
 
-	public function __construct(IConfig $config, LoggerInterface $logger) {
-		$this->config = $config;
-		$this->pythonDir = dirname(__DIR__, 2) . '/python/';
-		$this->logger = $logger;
+	public function __construct(
+        private LoggerInterface $logger,
+        private SettingsService $settingsService,
+    ) {
 	}
 
 	public function getName(): string {
@@ -37,28 +35,28 @@ class InstallDeps implements IRepairStep {
         $env = 'PATH='.escapeshellcmd($venv).'/bin:'.':$PATH VIRTUAL_ENV=' . escapeshellcmd($venv);
         try {
             $output = '';
-            $cmd1 = escapeshellcmd('python3') . ' -m venv ./python';
-            exec($cmd1 . ' 2>&1', $output, $returnCode); // Appending  2>&1 to avoid leaking sterr
+            $cmd0 = (json_decode($this->settingsService->getSetting('python_binary')) !== '' ? escapeshellcmd($this->settingsService->getSetting('python_binary')) : 'python3') . ' -m venv ./python';
+            exec($cmd0 . ' 2>&1', $output, $returnCode); // Appending  2>&1 to avoid leaking sterr
             if ($returnCode !== 0) {
                 chdir($oriCwd);
-                $this->logger->error('Failed to install  python dependencies: '.trim(implode("\n", $output)));
-                throw new \Exception('Failed to install  python dependencies: '.trim(implode("\n", $output)));
+                $this->logger->error('Failed to create python venv: '.$cmd0.' returned '.trim(implode("\n", $output)));
+                throw new \Exception('Failed to create python venv: '.$cmd0.' returned '.trim(implode("\n", $output)));
             }
             $output = '';
             $cmd1 = $env . ' ' . escapeshellcmd($python . 'python3') . ' ' . escapeshellcmd($python . 'pip3 ') . ' install pipx';
             exec($cmd1 . ' 2>&1', $output, $returnCode); // Appending  2>&1 to avoid leaking sterr
             if ($returnCode !== 0) {
                 chdir($oriCwd);
-                $this->logger->error('Failed to install  python dependencies: '.trim(implode("\n", $output)));
-                throw new \Exception('Failed to install  python dependencies: '.trim(implode("\n", $output)));
+                $this->logger->error('Failed to install pipx: '.$cmd1.' returned '.trim(implode("\n", $output)));
+                throw new \Exception('Failed to install pipx: '.$cmd1.' returned '.trim(implode("\n", $output)));
             }
             $output = '';
             $cmd2 =  $env . ' PIPX_HOME=' . $venv .  ' ' . 'PIPX_BIN_DIR=' . $python . ' ' .escapeshellcmd($python . 'python3') . ' ' . escapeshellcmd($python . 'pipx') . ' install poetry';
             exec($cmd2 . ' 2>&1', $output, $returnCode); // Appending  2>&1 to avoid leaking sterr
             if ($returnCode !== 0) {
                 chdir($oriCwd);
-                $this->logger->error('Failed to install  python dependencies: '.trim(implode("\n", $output)));
-                throw new \Exception('Failed to install  python dependencies: '.trim(implode("\n", $output)));
+                $this->logger->error('Failed to install poetry: '.$cmd2.' returned '.trim(implode("\n", $output)));
+                throw new \Exception('Failed to install poetry: '.$cmd2.' returned '.trim(implode("\n", $output)));
             }
             chdir(dirname(__DIR__, 2).'/src-py');
             $output = '';
@@ -66,8 +64,8 @@ class InstallDeps implements IRepairStep {
             exec($cmd3 . ' 2>&1', $output, $returnCode); // Appending  2>&1 to avoid leaking sterr
             if ($returnCode !== 0) {
                 chdir($oriCwd);
-                $this->logger->error('Failed to install  python dependencies: '.trim(implode("\n", $output)));
-                throw new \Exception('Failed to install  python dependencies: '.trim(implode("\n", $output)));
+                $this->logger->error('Failed to install python dependencies: '.$cmd3.' returned '.trim(implode("\n", $output)));
+                throw new \Exception('Failed to install python dependencies: '.$cmd3.' returned '.trim(implode("\n", $output)));
             }
         } catch (\Throwable $e) {
             chdir($oriCwd);

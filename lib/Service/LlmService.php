@@ -27,6 +27,7 @@ class LlmService {
     public function __construct(
         private LoggerInterface $logger,
         ICacheFactory $cacheFactory,
+        private SettingsService $settingsService,
     ) {
         $this->cache = $cacheFactory->createDistributed('llm');
 	}
@@ -57,6 +58,9 @@ class LlmService {
 		$this->logger->debug('Running '.var_export($command, true));
 
 		$proc = new Process($command, __DIR__);
+		$proc->setEnv([
+            'LLM_THREADS' => $this->settingsService->getSetting('threads')
+        ]);
 		$proc->setInput($input);
 		$proc->setTimeout($timeout);
 		try {
