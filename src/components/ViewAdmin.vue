@@ -22,15 +22,14 @@
 				{{ t('llm', 'Background Jobs are not executed via cron. This app requires background jobs to be executed via cron.') }}
 			</NcNoteCard>
 			<template v-if="python && cron === 'cron'">
-					<NcNoteCard show-alert type="success">
-						{{ t('llm', 'The app was installed successfully and will transcribe files in background processes on request.') }}
-					</NcNoteCard>
+				<NcNoteCard show-alert type="success">
+					{{ t('llm', 'The app was installed successfully and will transcribe files in background processes on request.') }}
+				</NcNoteCard>
 			</template>
 		</NcSettingsSection>
 		<NcSettingsSection :title="t('llm', 'Inference settings')">
 			<p>
-				<NcTextField
-					:value.sync="settings['threads']"
+				<NcTextField :value.sync="settings['threads']"
 					:label-visible="true"
 					:label="t('llm', 'The number of threads to use')"
 					@update:value="onChange" />
@@ -57,19 +56,19 @@
 </template>
 
 <script>
-import { NcNoteCard, NcSettingsSection, NcCheckboxRadioSwitch, NcTextField } from '@nextcloud/vue'
+import { NcNoteCard, NcSettingsSection, NcTextField } from '@nextcloud/vue'
 import axios from '@nextcloud/axios'
 import { generateUrl } from '@nextcloud/router'
 import { loadState } from '@nextcloud/initial-state'
 
 const SETTINGS = [
-		'python_binary',
-		'threads',
+	'python_binary',
+	'threads',
 ]
 
 export default {
 	name: 'ViewAdmin',
-	components: { NcSettingsSection, NcNoteCard, NcCheckboxRadioSwitch, NcTextField },
+	components: { NcSettingsSection, NcNoteCard, NcTextField },
 
 	data() {
 		return {
