@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: Nextcloud contributors
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
-name: Translation test
+name: Summarization test
 
 on:
   pull_request:
@@ -11,7 +11,7 @@ on:
       - stable*
 
 env:
-  APP_NAME: translate
+  APP_NAME: llm
 
 jobs:
   transcription:
