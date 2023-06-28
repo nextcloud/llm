@@ -15,17 +15,17 @@ use OCP\Settings\ISettings;
 class AdminSettings implements ISettings {
 
 	public function __construct(
-        private IInitialState $initialState,
-        private SettingsService $settingsService,
-    ) {
+		private IInitialState $initialState,
+		private SettingsService $settingsService,
+	) {
 	}
 
 	/**
 	 * @return TemplateResponse
 	 */
 	public function getForm(): TemplateResponse {
-        $settings = $this->settingsService->getAll();
-        $this->initialState->provideInitialState('settings', $settings);
+		$settings = $this->settingsService->getAll();
+		$this->initialState->provideInitialState('settings', $settings);
 
 		$modelsPath = __DIR__ . '/../../src-py/models';
 		$modelsDownloaded = file_exists($modelsPath . '/' . DownloadModelsService::MODEL_NAME);

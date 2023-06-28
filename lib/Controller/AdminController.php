@@ -30,17 +30,17 @@ class AdminController extends Controller {
 			return new JSONResponse(['python' => false]);
 		}
 
-        try {
-            exec(escapeshellcmd(dirname(__DIR__, 2) . '/python/bin/python3') . ' --version' . ' 2>&1', $output2, $returnCode2);
-        } catch (\Throwable $e) {
-            return new JSONResponse(['python' => false]);
-        }
+		try {
+			exec(escapeshellcmd(dirname(__DIR__, 2) . '/python/bin/python3') . ' --version' . ' 2>&1', $output2, $returnCode2);
+		} catch (\Throwable $e) {
+			return new JSONResponse(['python' => false]);
+		}
 
-        if ($returnCode !== 0 || $returnCode2 !== 0) {
-            return new JSONResponse(['python' => false]);
-        }
+		if ($returnCode !== 0 || $returnCode2 !== 0) {
+			return new JSONResponse(['python' => false]);
+		}
 
-		return new JSONResponse(['python' => explode(' ',trim($output[0])[1])]);
+		return new JSONResponse(['python' => explode(' ', trim($output[0])[1])]);
 	}
 
 	public function cron(): JSONResponse {

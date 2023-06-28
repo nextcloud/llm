@@ -15,7 +15,7 @@ class DownloadModelsService {
 	private IClientService $clientService;
 	private bool $isCLI;
 
-    public const MODEL_NAME = 'ggml-gpt4all-j-v1.3-groovy.bin';
+	public const MODEL_NAME = 'ggml-gpt4all-j-v1.3-groovy.bin';
 
 	public function __construct(IClientService $clientService, bool $isCLI) {
 		$this->clientService = $clientService;

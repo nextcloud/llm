@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 // SPDX-FileCopyrightText: Marcel Klehr <mklehr@gmx.net>
 // SPDX-License-Identifier: AGPL-3.0-or-later
@@ -13,9 +14,9 @@ declare(strict_types=1);
  */
 return [
 	'routes' => [
-        ['name' => 'admin#cron', 'url' => '/admin/cron', 'verb' => 'GET'],
-        ['name' => 'admin#python', 'url' => '/admin/python', 'verb' => 'GET'],
-        ['name' => 'admin#get_setting', 'url' => '/admin/settings/{setting}', 'verb' => 'GET'],
-        ['name' => 'admin#set_setting', 'url' => '/admin/settings/{setting}', 'verb' => 'PUT'],
+		['name' => 'admin#cron', 'url' => '/admin/cron', 'verb' => 'GET'],
+		['name' => 'admin#python', 'url' => '/admin/python', 'verb' => 'GET'],
+		['name' => 'admin#get_setting', 'url' => '/admin/settings/{setting}', 'verb' => 'GET'],
+		['name' => 'admin#set_setting', 'url' => '/admin/settings/{setting}', 'verb' => 'PUT'],
 	]
 ];

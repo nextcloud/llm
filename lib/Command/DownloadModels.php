@@ -8,7 +8,6 @@ namespace OCA\Llm\Command;
 
 use OCA\Llm\Service\DownloadModelsService;
 use Symfony\Component\Console\Command\Command;
-use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -42,10 +41,10 @@ class DownloadModels extends Command {
 	 */
 	protected function execute(InputInterface $input, OutputInterface $output): int {
 		try {
-            $output->writeln("Downloading model");
-            if ($this->downloader->download($input->getOption('force'))) {
-                $output->writeln('Successful');
-            }
+			$output->writeln("Downloading model");
+			if ($this->downloader->download($input->getOption('force'))) {
+				$output->writeln('Successful');
+			}
 		} catch (\Exception $ex) {
 			$output->writeln('<error>Failed to download models</error>');
 			$output->writeln($ex->getMessage());

@@ -42,9 +42,9 @@ class Summarize extends Command {
 	protected function execute(InputInterface $input, OutputInterface $output): int {
 		try {
 			$output->writeln($this->llm->call(
-                $input->getArgument('input'),
-                SummaryTask::TYPE
-            ));
+				$input->getArgument('input'),
+				SummaryTask::TYPE
+			));
 			return 0;
 		} catch(\RuntimeException $e) {
 			$output->writeln($e->getMessage());

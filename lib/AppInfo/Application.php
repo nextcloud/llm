@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 // SPDX-FileCopyrightText: Marcel Klehr <mklehr@gmx.net>
 // SPDX-License-Identifier: AGPL-3.0-or-later
@@ -18,10 +19,10 @@ class Application extends App implements IBootstrap {
 		parent::__construct(self::APP_ID);
 	}
 
-    public function register(IRegistrationContext $context): void {
-        $context->registerLanguageModelProvider(LanguageModel::class);
-    }
+	public function register(IRegistrationContext $context): void {
+		$context->registerLanguageModelProvider(LanguageModel::class);
+	}
 
-    public function boot(IBootContext $context): void {
-    }
+	public function boot(IBootContext $context): void {
+	}
 }
