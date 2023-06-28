@@ -121,11 +121,11 @@ jobs:
 
       - name: Download models
         run: |
-          ./occ translate:download-models "de" "en"
+          ./occ llm:download-models
 
       - name: Run transcription
         run: |
-          ./occ translate "de" "en" "Hallo Welt" > output.txt
+          ./occ llm:summarize "Hello world" > output.txt
 
       - name: Show log on failure
         if: failure()
