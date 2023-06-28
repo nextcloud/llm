@@ -1,8 +1,7 @@
 <!--
-  - Copyright (c) 2023. The llm contributors.
-  -
-  - This file is licensed under the Affero General Public License version 3 or later. See the COPYING file.
-  -->
+SPDX-FileCopyrightText: Nextcloud contributors
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
 
 <template>
 	<div id="llm">
