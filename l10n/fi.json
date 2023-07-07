@@ -1,0 +1,6 @@
+{ "translations": {
+    "Status" : "Tila",
+    "Failed to load settings" : "Asetusten lataaminen epäonnistui",
+    "Failed to save settings" : "Asetusten tallentaminen epäonnistui"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}
