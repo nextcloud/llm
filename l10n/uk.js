@@ -1,6 +1,7 @@
 OC.L10N.register(
     "llm",
     {
+    "Large language model" : "Велика мовна модель",
     "Status" : "Статус",
     "Machine learning models have been downloaded successfully." : "Завантаження моделей машинного навчання відбулося успішно.",
     "The machine learning models still need to be downloaded (see below)." : "Моделі машинного навчання все ще потрібно завантажити (див. нижче).",

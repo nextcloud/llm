@@ -3,8 +3,8 @@ OC.L10N.register(
     {
     "Large language model" : "Gran modelo lingüístico",
     "Llm" : "Llm",
-    "A large language model in nextcloud" : "Un gran modelo lingüístico en Nextcloud",
-    "A large language model in Nextcloud\n\nThis app integrates a locally running GPT4All running on CPU into Nextcloud\nusing the LanguageModel API introduced in Nextcloud v28" : "Un gran modelo lingüístico en Nextcloud\n\nEsta aplicación integra un GPT4All que se executa localmente na CPU en Nextcloud\nusando a API LanguageModel introducida en Nextcloud v28",
+    "A large language model in nextcloud" : "Un amplo modelo lingüístico en Nextcloud",
+    "A large language model in Nextcloud\n\nThis app integrates a locally running GPT4All running on CPU into Nextcloud\nusing the LanguageModel API introduced in Nextcloud v28" : "Un amplo modelo lingüístico en Nextcloud\n\nEsta aplicación integra un GPT4All que se executa localmente na CPU en Nextcloud\nusando a API LanguageModel introducida en Nextcloud v28",
     "Status" : "Estado",
     "Machine learning models have been downloaded successfully." : "Os modelos de aprendizaxe automática descargáronse correctamente.",
     "The machine learning models still need to be downloaded (see below)." : "Aínda hai que descargar os modelos de aprendizaxe automática. (Vexa embaixo.)",
