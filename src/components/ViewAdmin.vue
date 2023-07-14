@@ -39,13 +39,13 @@ SPDX-License-Identifier: AGPL-3.0-or-later
 				<span class="icon-loading-small" />&nbsp;&nbsp;&nbsp;&nbsp;{{ t('llm', 'Checking Python') }}
 			</p>
 			<NcNoteCard v-else-if="python === false" type="error">
-				{{ t('llm', 'Could not execute python. You may need to set the path to a working executable manually.') }}
+				{{ t('llm', 'Could not execute Python. You may need to set the path to a working executable manually.') }}
 			</NcNoteCard>
 			<NcNoteCard v-else type="success">
 				{{ t('llm', 'Python executable executed successfully and setup works.') }}
 			</NcNoteCard>
 			<p>
-				{{ t('llm', 'If python is not found automatically on your system for some reason you can set the path to the python executable here. If you change this value, make sure to run occ maintenance:repair afterwards.') }}
+				{{ t('llm', 'If Python is not found automatically on your system for some reason you can set the path to the Python executable here. If you change this value, make sure to run occ maintenance:repair afterwards.') }}
 			</p>
 			<p>
 				<input v-model="settings['python_binary']" type="text" @change="onChange">
