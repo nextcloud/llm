@@ -15,7 +15,7 @@ OC.L10N.register(
     "The number of threads to use for inference (more is faster)" : "عدد الخيوط threads المراد استخدامها للاستدلال (كلما زاد عددها، زادت سرعة الأداء)",
     "Python" : "Python",
     "Checking Python" : "إختبار بايتون ",
-    "Could not execute python. You may need to set the path to a working executable manually." : "تعذر تنفيذ بيثون. قد تحتاج إلى تعيين المسار إلى ملف قابل للتنفيذ يعمل يدويًا.",
+    "Could not execute python. You may need to set the path to a working executable manually." : "تعذر تنفيذ بايثون. قد تحتاج إلى تعيين المسار إلى ملف قابل للتنفيذ يعمل يدويًا.",
     "Python executable executed successfully and setup works." : "تم تنفيذ برنامج Python بنجاح، و الإعداد يعمل.",
     "If python is not found automatically on your system for some reason you can set the path to the python executable here. If you change this value, make sure to run occ maintenance:repair afterwards." : "إذا لم يتم العثور على Python تلقائيًا على نظامك لسبب ما ، يمكنك تعيين المسار إلى ملف Python القابل للتنفيذ هنا. إذا قمت بتغيير هذه القيمة، فتأكد من تشغيل أمر الصيانة:  occ maintenance:repair ",
     "Failed to load settings" : "إخفاق في تحميل الإعدادات",
