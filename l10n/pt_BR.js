@@ -3,7 +3,6 @@ OC.L10N.register(
     {
     "Large language model" : "Modelo de linguagem grande",
     "Llm" : "Mlg",
-    "A large language model in nextcloud" : "Um modelo de linguagem grande no nextcloud",
     "A large language model in Nextcloud\n\nThis app integrates a locally running GPT4All running on CPU into Nextcloud\nusing the LanguageModel API introduced in Nextcloud v28" : "Um modelo de linguagem grande no Nextcloud\n\nEste app integra um modelo GPT4All executado localmente na CPU ao Nextcloud\nusaando a API de Modelo de Linguagem introduzida no Nextcloud v28",
     "Status" : "Status",
     "Machine learning models have been downloaded successfully." : "Os modelos de aprendizado de máquina foram baixados com sucesso.",
@@ -15,9 +14,7 @@ OC.L10N.register(
     "The number of threads to use for inference (more is faster)" : "O número de threads para utilizar na inferência (mais é mais rápido)",
     "Python" : "Python",
     "Checking Python" : "Verificando Python",
-    "Could not execute python. You may need to set the path to a working executable manually." : "Não foi possível executar python. Você pode precisar configurar um caminho para o executável manualmente.",
     "Python executable executed successfully and setup works." : "Executável Python executou corretamente e a instalação funciona.",
-    "If python is not found automatically on your system for some reason you can set the path to the python executable here. If you change this value, make sure to run occ maintenance:repair afterwards." : "Se python não for encontrado automaticamente no seu sistema por algum motivo, você pode configurar o caminho para o executável python aqui. Se você modificar este valor, lembre-se de executar occ maintenance:repair após.",
     "Failed to load settings" : "Erro ao carregar configurações",
     "Failed to save settings" : "Erro ao salvar configurações"
 },

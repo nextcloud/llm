@@ -3,7 +3,6 @@ OC.L10N.register(
     {
     "Large language model" : "Велики језички модел",
     "Llm" : "Вјм",
-    "A large language model in nextcloud" : "Велики језички модел у Nextcloud",
     "A large language model in Nextcloud\n\nThis app integrates a locally running GPT4All running on CPU into Nextcloud\nusing the LanguageModel API introduced in Nextcloud v28" : "Велики језички модел у Nextcloud\n\nОва апликација интегрише GPT4All који се локално извршава на CPU у Nextcloud\nупотребом LanguageModel API уведеном у Nextcloud v28",
     "Status" : "Стање",
     "Machine learning models have been downloaded successfully." : "Успешно су преузети модели машинског учења.",
@@ -15,9 +14,7 @@ OC.L10N.register(
     "The number of threads to use for inference (more is faster)" : "Број нити који се користи за закључивање (више је брже)",
     "Python" : "Python",
     "Checking Python" : "Проверава се Python",
-    "Could not execute python. You may need to set the path to a working executable manually." : "Не може да се покрене python извршни фајл. Вероватно је потребно да ручно поставите путању до исправног извршног фајла.",
     "Python executable executed successfully and setup works." : "Python извршни фајл се успешно покренуо и ваша поставка функционише.",
-    "If python is not found automatically on your system for some reason you can set the path to the python executable here. If you change this value, make sure to run occ maintenance:repair afterwards." : "Ако се python из неког разлога не пронађе аутоматски на вашем систему, овде можете ручно да поставите путању до python извршног фајла. Ако промените ову вредност, обавезно након тога извршите команду occ maintenance:repair.",
     "Failed to load settings" : "Грешка у дохватању поставки",
     "Failed to save settings" : "Грешка приликом чувања поставки"
 },

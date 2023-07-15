@@ -3,7 +3,6 @@ OC.L10N.register(
     {
     "Large language model" : "Rozsáhlý jazykový model",
     "Llm" : "Llm",
-    "A large language model in nextcloud" : "Rozsáhlý jazykový model v Nextcloud",
     "A large language model in Nextcloud\n\nThis app integrates a locally running GPT4All running on CPU into Nextcloud\nusing the LanguageModel API introduced in Nextcloud v28" : "Rozsáhlý jazykový model v Nextcloud\n\nTato aplikace napojuje na přímo na serveru provozované GPT4All (vypočítávané procesorem) do Nextcloud\ns použitím LanguageModel API, zavedeným v Nextcloud v28",
     "Status" : "Stav",
     "Machine learning models have been downloaded successfully." : "Modely strojového učení byly úspěšně staženy.",
@@ -15,9 +14,7 @@ OC.L10N.register(
     "The number of threads to use for inference (more is faster)" : "Počet vláken které použít pro inferenci (více je rychlejší)",
     "Python" : "Python",
     "Checking Python" : "Kontroluje se Python",
-    "Could not execute python. You may need to set the path to a working executable manually." : "Nedaří se spustit python. Může být třeba ručně nastavit popis umístění funkčního spustitelného souboru.",
     "Python executable executed successfully and setup works." : "Spustitelný soubor s Python byl úspěšně spuštěn a dané uspořádání funguje.",
-    "If python is not found automatically on your system for some reason you can set the path to the python executable here. If you change this value, make sure to run occ maintenance:repair afterwards." : "Pokud z nějakého důvodu není python na vašem serveru nalezen automaticky, je možné zde zadat popis umístění spustitelného souboru s python. Pokud tuto hodnotu změníte, nezapomeňte následně spustit příkaz occ maintenance:repair",
     "Failed to load settings" : "Nepodařilo se načíst nastavení",
     "Failed to save settings" : "Nastavení se nepodařilo uložit"
 },

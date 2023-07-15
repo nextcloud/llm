@@ -3,7 +3,6 @@ OC.L10N.register(
     {
     "Large language model" : "Amplio modelo lingüístico",
     "Llm" : "Llm",
-    "A large language model in nextcloud" : "Un amplio modelo lingüístico en nextcloud",
     "A large language model in Nextcloud\n\nThis app integrates a locally running GPT4All running on CPU into Nextcloud\nusing the LanguageModel API introduced in Nextcloud v28" : "Un amplio modelo lingüístico en Nextcloud\n\nEsta aplicación integra un GPT4All que se ejecuta localmente en la CPU en Nextcloud\nutilizando la API LanguageModel introducida en Nextcloud v28",
     "Status" : "Estatus",
     "Machine learning models have been downloaded successfully." : "Los modelos de machine learning han sido descargados de forma satisfactoria.",
@@ -15,9 +14,7 @@ OC.L10N.register(
     "The number of threads to use for inference (more is faster)" : "El número de hilos que se utilizarán para la inferencia (más es más rápido).",
     "Python" : "Python",
     "Checking Python" : "Comprobando Python",
-    "Could not execute python. You may need to set the path to a working executable manually." : "No se ha podido ejecutar python. Es posible que tenga que establecer manualmente la ruta a un ejecutable que funcione.",
     "Python executable executed successfully and setup works." : "El ejecutable Python se ha ejecutado correctamente y la configuración funciona.",
-    "If python is not found automatically on your system for some reason you can set the path to the python executable here. If you change this value, make sure to run occ maintenance:repair afterwards." : "Si python no se encuentra automáticamente en su sistema por alguna razón, puede establecer aquí la ruta al ejecutable de python. Si cambia este valor, asegúrese de ejecutar occ maintenance:repair después.",
     "Failed to load settings" : "Fallo al cargar configuraciones",
     "Failed to save settings" : "Fallo al guardar configuraciones"
 },
