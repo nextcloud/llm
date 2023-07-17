@@ -7,9 +7,6 @@ namespace OCA\Llm\Service;
 
 use OCP\ICache;
 use OCP\ICacheFactory;
-use OCP\LanguageModel\FreePromptTask;
-use OCP\LanguageModel\HeadlineTask;
-use OCP\LanguageModel\SummaryTask;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\Process\Exception\ProcessTimedOutException;
 use Symfony\Component\Process\Exception\RuntimeException;
@@ -19,9 +16,9 @@ class LlmService {
 	public const CACHE_TTL = 60 * 60 * 24 * 7;
 
 	public const TASKS = [
-		SummaryTask::TYPE,
-		HeadlineTask::TYPE,
-		FreePromptTask::TYPE,
+		'summarize',
+		'headline',
+		'free_prompt',
 	];
 	private ICache $cache;
 

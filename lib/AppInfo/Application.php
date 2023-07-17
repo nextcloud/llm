@@ -6,7 +6,9 @@ declare(strict_types=1);
 
 namespace OCA\Llm\AppInfo;
 
-use OCA\Llm\Provider\LanguageModel;
+use OCA\Llm\Provider\FreePromptProvider;
+use OCA\Llm\Provider\HeadlineProvider;
+use OCA\Llm\Provider\SummaryProvider;
 use OCP\AppFramework\App;
 use OCP\AppFramework\Bootstrap\IBootContext;
 use OCP\AppFramework\Bootstrap\IBootstrap;
@@ -20,7 +22,9 @@ class Application extends App implements IBootstrap {
 	}
 
 	public function register(IRegistrationContext $context): void {
-		$context->registerLanguageModelProvider(LanguageModel::class);
+		$context->registerTextProcessingProvider(FreePromptProvider::class);
+		$context->registerTextProcessingProvider(SummaryProvider::class);
+		$context->registerTextProcessingProvider(HeadlineProvider::class);
 	}
 
 	public function boot(IBootContext $context): void {
