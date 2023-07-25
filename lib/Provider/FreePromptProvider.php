@@ -17,7 +17,7 @@ class FreePromptProvider implements IProvider {
 	}
 
 	public function getName(): string {
-		return 'Nextcloud local LanguageModel';
+		return 'Nextcloud Large Language Model App';
 	}
 
 	public function process(string $prompt): string {
