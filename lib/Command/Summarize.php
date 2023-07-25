@@ -7,7 +7,6 @@ declare(strict_types=1);
 namespace OCA\Llm\Command;
 
 use OCA\Llm\Service\LlmService;
-use OCP\LanguageModel\SummaryTask;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -43,7 +42,7 @@ class Summarize extends Command {
 		try {
 			$output->writeln($this->llm->call(
 				$input->getArgument('input'),
-				SummaryTask::TYPE
+                'summarize'
 			));
 			return 0;
 		} catch(\RuntimeException $e) {
