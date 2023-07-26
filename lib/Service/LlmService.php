@@ -74,17 +74,17 @@ class LlmService {
 			}
 			if ($proc->getExitCode() !== 0) {
 				$this->logger->warning($errOut);
-				throw new \RuntimeException('LLM process failed');
+				throw new \RuntimeException('LLM process failed: process exited with code ' . $proc->getExitCode());
 			}
 			$buffer = explode('###', $buffer, 2)[1];
 			$this->cache->set($key, $buffer, self::CACHE_TTL);
 			return $buffer;
 		} catch (ProcessTimedOutException $e) {
-			$this->logger->warning($errOut);
-			throw new \RuntimeException('LLM process timeout');
+			$this->logger->warning($errOut, ['exception' => $e ]);
+			throw new \RuntimeException('LLM process timeout', 0, $e);
 		} catch (RuntimeException $e) {
-			$this->logger->warning($errOut);
-			throw new \RuntimeException('LLM process failed');
+			$this->logger->warning($errOut, ['exception' => $e ]);
+			throw new \RuntimeException('LLM process failed: ' . $e->getMessage(), 0, $e);
 		}
 	}
 }
