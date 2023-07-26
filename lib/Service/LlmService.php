@@ -73,8 +73,8 @@ class LlmService {
 				$buffer .= $data;
 			}
 			if ($proc->getExitCode() !== 0) {
-				$this->logger->warning($errOut, ['exception' => $e ]);
-				throw new \RuntimeException('LLM process failed: process exited with code ' . $proc->getExitCode(), 0, $e);
+				$this->logger->warning($errOut);
+				throw new \RuntimeException('LLM process failed: process exited with code ' . $proc->getExitCode());
 			}
 			$buffer = explode('###', $buffer, 2)[1];
 			$this->cache->set($key, $buffer, self::CACHE_TTL);
