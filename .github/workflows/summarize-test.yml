@@ -25,7 +25,7 @@ jobs:
         databases: [ 'sqlite' ]
         server-versions: [ 'master' ]
 
-    name: Test translate command on ${{ matrix.server-versions }} php@${{ matrix.php-versions }}
+    name: Test summarize command on ${{ matrix.server-versions }} php@${{ matrix.php-versions }}
 
     env:
       MYSQL_PORT: 4444
@@ -74,6 +74,14 @@ jobs:
         uses: actions/checkout@v2
         with:
           path: apps/${{ env.APP_NAME }}
+
+      - name: Checkout app submodules
+        shell: bash
+        run: |
+          cd apps/${{ env.APP_NAME }}
+          auth_header="$(git config --local --get http.https://github.com/.extraheader)"
+          git submodule sync --recursive
+          git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --force --recursive --depth=1
 
       - name: Read package.json node and npm engines version
         uses: skjnldsv/read-package-engines-version-actions@v1.1
