@@ -53,6 +53,6 @@ class DownloadModelsService {
 	}
 
 	public function getModelUrl(string $model): string {
-		return "https://huggingface.co/nomic-ai/gpt4all-falcon-ggml/resolve/main/$model";
+		return "https://download.nextcloud.com/server/apps/llm/$model";
 	}
 }
