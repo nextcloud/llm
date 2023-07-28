@@ -126,16 +126,16 @@ jobs:
 
       - name: Run transcription
         run: |
-          ./occ llm:summarize "Hello world" > output.txt
+          ./occ llm:summarize "$(cat $(pwd)/apps/${{env.APP_NAME}}/test/fixtures/input.txt)" > output.txt
 
       - name: Show log on failure
         if: failure()
         run: |
           tail data/nextcloud.log
-          diff $(pwd)/apps/${{env.APP_NAME}}/test/fixtures/test.txt output.txt
+          diff $(pwd)/apps/${{env.APP_NAME}}/test/fixtures/summarize.txt output.txt
 
 
       - name: Check transcript
         run: |
           tail data/nextcloud.log
-          diff $(pwd)/apps/${{env.APP_NAME}}/test/fixtures/test.txt output.txt
+          diff $(pwd)/apps/${{env.APP_NAME}}/test/fixtures/summarize.txt output.txt
