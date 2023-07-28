@@ -36,7 +36,7 @@ class LlmService {
 	 * @param float|int $timeout
 	 * @return string
 	 */
-	public function call(string $input, string $task, $timeout = 20 * 60) : string {
+	public function call(string $input, string $task, $timeout = 35 * 60) : string {
 		if (!in_array($task, self::TASKS)) {
 			throw new \RuntimeException('LLM task not recognized');
 		}
