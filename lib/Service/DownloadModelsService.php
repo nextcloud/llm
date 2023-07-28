@@ -15,7 +15,7 @@ class DownloadModelsService {
 	private IClientService $clientService;
 	private bool $isCLI;
 
-	public const MODEL_NAME = 'ggml-gpt4all-j-v1.3-groovy.bin';
+	public const MODEL_NAME = 'ggml-model-gpt4all-falcon-q4_0.bin';
 
 	public function __construct(IClientService $clientService, bool $isCLI) {
 		$this->clientService = $clientService;
@@ -53,6 +53,6 @@ class DownloadModelsService {
 	}
 
 	public function getModelUrl(string $model): string {
-		return "https://download.nextcloud.com/server/apps/llm/$model";
+		return "https://huggingface.co/nomic-ai/gpt4all-falcon-ggml/resolve/main/$model";
 	}
 }
