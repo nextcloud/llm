@@ -17,7 +17,7 @@ OC.L10N.register(
     "Checking Python" : "Comprobación de Python",
     "Could not execute Python. You may need to set the path to a working executable manually." : "Non foi posíbel executar Python. Quizais necesite estabelecer manualmente a ruta a un executábel que funcione.",
     "Python executable executed successfully and setup works." : "O executábel de Python executouse con éxito e a configuración funciona.",
-    "If Python is not found automatically on your system for some reason you can set the path to the Python executable here. If you change this value, make sure to run occ maintenance:repair afterwards." : "Se non se atopa automaticamente Python no seu sistema por algún motivo, pode definir aquí unha ruta ao executábel de Python. Se cambia este valor, asegúrese de executar occ maintenance:repair após.",
+    "If Python is not found automatically on your system for some reason you can set the path to the Python executable here. If you change this value, make sure to run occ maintenance:repair afterwards." : "Se non se atopa automaticamente Python no seu sistema por algún motivo, pode estabelecer aquí unha ruta ao executábel de Python. Se cambia este valor, asegúrese de executar occ maintenance:repair após.",
     "Failed to load settings" : "Produciuse un fallo ao cargar os axustes",
     "Failed to save settings" : "Produciuse un fallo ao gardar os axustes"
 },
