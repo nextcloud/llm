@@ -20,6 +20,7 @@ using the LanguageModel API introduced in Nextcloud v28
     <namespace>Llm</namespace>
     <category>tools</category>
     <bugs>https://github.com/nextcloud/llm/issues</bugs>
+    <screenshot>https://raw.githubusercontent.com/nextcloud/llm/main/screenshots/Logo.png</screenshot>
     <dependencies>
         <nextcloud min-version="28" max-version="28"/>
     </dependencies>

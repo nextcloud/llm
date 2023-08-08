@@ -3,6 +3,8 @@ SPDX-FileCopyrightText: Marcel Klehr <mklehr@gmx.net>
 SPDX-License-Identifier: CC0-1.0
 -->
 
+![](https://raw.githubusercontent.com/nextcloud/llm/main/screenshots/Logo.png)
+
 # A large language model in Nextcloud
 
 This app integrates a locally running GPT4All running on CPU into Nextcloud using the LanguageModel API introduced in Nextcloud v28.
