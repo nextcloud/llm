@@ -6,13 +6,33 @@
     SPDX-License-Identifier: CC0-1.0
     -->
     <id>llm</id>
-    <name>Llm</name>
-    <summary>A large language model in Nextcloud</summary>
+    <name>Local GPT4ALL Large language model</name>
+    <summary>TextProcessing provider using a GPT4All Large Language Model by Nomic AI that runs locally on CPU</summary>
     <description><![CDATA[
-A large language model in Nextcloud
+A TextProcessing provider using a GPT4All Large Language Model by Nomic AI  that runs locally on CPU
 
-This app integrates a locally running GPT4All running on CPU into Nextcloud
-using the LanguageModel API introduced in Nextcloud v28
+The models run completely on your machine. No private data leaves your servers.
+
+After installing this app you will need to run
+
+    occ llm:download-models
+
+Requirements:
+
+* x86 CPU
+* GNU lib C (musl is not supported)
+* Python 3.10+
+
+## Ethical AI Rating
+### Rating: 🟢
+
+Positive:
+* the software for training and inference of this model is open source
+* the trained model is freely available, and thus can be ran on-premises
+* the training data is freely available, making it possible to check or correct for bias or optimise the performance and CO2 usage.
+
+Learn more about the Nextcloud Ethical AI Rating [in our blog](https://nextcloud.com/blog/nextcloud-ethical-ai-rating/).
+
 ]]></description>
     <version>0.0.1</version>
     <licence>agpl</licence>

@@ -7,7 +7,15 @@ SPDX-License-Identifier: CC0-1.0
 
 # A large language model in Nextcloud
 
-This app integrates a locally running GPT4All running on CPU into Nextcloud using the LanguageModel API introduced in Nextcloud v28.
+This app ships a TextProcessing provider using a GPT4All Large Language Model by Nomic AI  that runs locally on CPU
+
+The models run completely on your machine. No private data leaves your servers.
+
+Requirements:
+
+* x86 CPU
+* GNU lib C (musl is not supported)
+* Python 3.10+
 
 ## Ethical AI Rating
 ### Rating: 🟢
