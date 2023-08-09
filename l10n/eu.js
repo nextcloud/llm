@@ -2,7 +2,6 @@ OC.L10N.register(
     "llm",
     {
     "Large language model" : "Lengoaia modelo handia (llm)",
-    "Llm" : "Llm",
     "Status" : "Egoera",
     "Machine learning models have been downloaded successfully." : "Machine learning modeloak ondo deskargatu dira.",
     "The machine learning models still need to be downloaded (see below)." : "Machine learning modeloak oraindik deskargatu behar dira (ikusi behean).",

@@ -1,7 +1,5 @@
 { "translations": {
     "Large language model" : "Μεγάλο γλωσσικό μοντέλο",
-    "Llm" : "Llm",
-    "A large language model in Nextcloud\n\nThis app integrates a locally running GPT4All running on CPU into Nextcloud\nusing the LanguageModel API introduced in Nextcloud v28" : "Ένα μεγάλο μοντέλο γλώσσας στο Nextcloud\n\nΑυτή η εφαρμογή ενσωματώνει ένα τοπικά εκτελούμενο GPT4All που εκτελείται σε CPU στο Nextcloud\nχρησιμοποιώντας το LanguageModel API που παρουσιάστηκε στο Nextcloud v28",
     "Status" : "Κατάσταση",
     "Machine learning models have been downloaded successfully." : "Τα μοντέλα μηχανικής μάθησης λήφθηκαν με επιτυχία.",
     "The machine learning models still need to be downloaded (see below)." : "Τα μοντέλα μηχανικής μάθησης πρέπει ακόμα να ληφθούν (δείτε παρακάτω).",

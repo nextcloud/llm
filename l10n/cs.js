@@ -2,9 +2,6 @@ OC.L10N.register(
     "llm",
     {
     "Large language model" : "Rozsáhlý jazykový model",
-    "Llm" : "Llm",
-    "A large language model in Nextcloud" : "Rozsáhlý jazykový model v Nextcloud",
-    "A large language model in Nextcloud\n\nThis app integrates a locally running GPT4All running on CPU into Nextcloud\nusing the LanguageModel API introduced in Nextcloud v28" : "Rozsáhlý jazykový model v Nextcloud\n\nTato aplikace napojuje na přímo na serveru provozované GPT4All (vypočítávané procesorem) do Nextcloud\ns použitím LanguageModel API, zavedeným v Nextcloud v28",
     "Status" : "Stav",
     "Machine learning models have been downloaded successfully." : "Modely strojového učení byly úspěšně staženy.",
     "The machine learning models still need to be downloaded (see below)." : "Pořád ještě je třeba stáhnout si modely strojového učení (viz níže).",

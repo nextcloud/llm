@@ -1,8 +1,5 @@
 { "translations": {
     "Large language model" : "Modelo de linguagem grande",
-    "Llm" : "Mlg",
-    "A large language model in Nextcloud" : "Um grande modelo de linguagem no Nextcloud",
-    "A large language model in Nextcloud\n\nThis app integrates a locally running GPT4All running on CPU into Nextcloud\nusing the LanguageModel API introduced in Nextcloud v28" : "Um modelo de linguagem grande no Nextcloud\n\nEste app integra um modelo GPT4All executado localmente na CPU ao Nextcloud\nusaando a API de Modelo de Linguagem introduzida no Nextcloud v28",
     "Status" : "Status",
     "Machine learning models have been downloaded successfully." : "Os modelos de aprendizado de máquina foram baixados com sucesso.",
     "The machine learning models still need to be downloaded (see below)." : "Os modelos de aprendizado de máquina ainda precisam ser baixados (veja abaixo).",

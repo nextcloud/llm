@@ -1,8 +1,5 @@
 { "translations": {
     "Large language model" : "نموذج لُغَوي language model كبير ",
-    "Llm" : "Llm",
-    "A large language model in Nextcloud" : "نموذج لُغَوِي كبير في نكست كلاود",
-    "A large language model in Nextcloud\n\nThis app integrates a locally running GPT4All running on CPU into Nextcloud\nusing the LanguageModel API introduced in Nextcloud v28" : "نموذج لُغَوي language model كبير في نكست كلاود. يدمج هذا التطبيق GPT4 الذي يتم تشغيله محليًا على وحدة المعالجة المركزية في Nextcloud - باستخدام واجهة برمجة تطبيقات LanguageModel API المقدمة في Nextcloud v28",
     "Status" : "الحاله",
     "Machine learning models have been downloaded successfully." : "تمّ تحميل نماذج تعلّم الآلة بنجاح.",
     "The machine learning models still need to be downloaded (see below)." : "نماذج تعلّم الآلة لم يتم تحميلها بعدُ. (أنظر أدناه).",

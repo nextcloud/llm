@@ -2,9 +2,6 @@ OC.L10N.register(
     "llm",
     {
     "Large language model" : "大語言模型",
-    "Llm" : "Llm",
-    "A large language model in Nextcloud" : "Nextcloud 中的大型語言模型",
-    "A large language model in Nextcloud\n\nThis app integrates a locally running GPT4All running on CPU into Nextcloud\nusing the LanguageModel API introduced in Nextcloud v28" : "Nextcloud 中的大型語言模型\n\n該應用程式使用 Nextcloud v28 中引入的 LanguageModel API 將近端運行的 GPT4All 集成到 Nextcloud 中",
     "Status" : "狀態",
     "Machine learning models have been downloaded successfully." : "已成功下載機器學習模型。",
     "The machine learning models still need to be downloaded (see below)." : "機器學習模型仍需下載（見下方）。",
