@@ -2,6 +2,8 @@ OC.L10N.register(
     "llm",
     {
     "Large language model" : "Geniş dil modeli",
+    "Local GPT4ALL Large language model" : "Yerel GPT4ALL geniş dil modeli",
+    "TextProcessing provider using a GPT4All Large Language Model by Nomic AI that runs locally on CPU" : "Nomic AI tarafından yerel işlemci üzerinde çalışan GPT4All geniş dil modeli kullanan metin işleme hizmeti sağlayıcısı",
     "Status" : "Durum",
     "Machine learning models have been downloaded successfully." : "Makine öğrenmesi modelleri indirildi.",
     "The machine learning models still need to be downloaded (see below)." : "Makine öğrenmesi modellerinin indirilmesi gerekiyor (aşağıya bakın).",
