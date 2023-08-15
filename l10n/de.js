@@ -1,7 +1,10 @@
 OC.L10N.register(
     "llm",
     {
+    "Large language model" : "Großes Sprachmodell",
     "Status" : "Status",
+    "Inference settings" : "Schnittstelleneinstellungen",
+    "Python" : "Python",
     "Failed to load settings" : "Einstellungen konnten nicht geladen werden",
     "Failed to save settings" : "Einstellungen konnten nicht gespeichert werden"
 },
