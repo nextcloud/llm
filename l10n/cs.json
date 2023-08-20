@@ -1,5 +1,7 @@
 { "translations": {
     "Large language model" : "Rozsáhlý jazykový model",
+    "Local GPT4ALL Large language model" : "Lokální GPT4ALL rozsáhlý jazykový model",
+    "TextProcessing provider using a GPT4All Large Language Model by Nomic AI that runs locally on CPU" : "Poskytovatel zpracovávání textu využívající rozsáhlý jazykový model GPT4All od Nomic AI, který je spouštěný lokálně na procesoru",
     "Status" : "Stav",
     "Machine learning models have been downloaded successfully." : "Modely strojového učení byly úspěšně staženy.",
     "The machine learning models still need to be downloaded (see below)." : "Pořád ještě je třeba stáhnout si modely strojového učení (viz níže).",
