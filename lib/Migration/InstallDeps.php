@@ -35,7 +35,7 @@ class InstallDeps implements IRepairStep {
 		$env = 'PATH='.escapeshellcmd($venv).'/bin:'.':$PATH VIRTUAL_ENV=' . escapeshellcmd($venv);
 		try {
 			$output = '';
-			$cmd0 = (json_decode($this->settingsService->getSetting('python_binary')) !== '' ? escapeshellcmd($this->settingsService->getSetting('python_binary')) : 'python3') . ' -m venv ./python';
+			$cmd0 = ($this->settingsService->getSetting('python_binary') !== '' ? $this->settingsService->getSetting('python_binary') : 'python3') . ' -m venv ./python';
 			exec($cmd0 . ' 2>&1', $output, $returnCode); // Appending  2>&1 to avoid leaking sterr
 			if ($returnCode !== 0) {
 				chdir($oriCwd);
