@@ -28,7 +28,10 @@ class AdminSettings implements ISettings {
 		$this->initialState->provideInitialState('settings', $settings);
 
 		$modelsPath = __DIR__ . '/../../src-py/models';
-		$modelsDownloaded = file_exists($modelsPath . '/' . DownloadModelsService::MODEL_NAME);
+        $modelsDownloaded = [];
+        foreach (DownloadModelsService::MODELS as $model => $url) {
+            $modelsDownloaded[$model] = file_exists($modelsPath . '/' . basename($url));
+        }
 		$this->initialState->provideInitialState('modelsDownloaded', $modelsDownloaded);
 
 		return new TemplateResponse(Application::APP_ID, 'admin');

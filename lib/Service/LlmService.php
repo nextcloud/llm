@@ -46,18 +46,22 @@ class LlmService {
 			return $output;
 		}
 
+        $model = $this->settingsService->getSetting('model');
+        $modelFileName = basename(DownloadModelsService::MODELS[$model]);
+
 		$command = [
 			dirname(__DIR__, 2) . '/python/bin/python3',
 			dirname(__DIR__, 2) . '/src-py/index.py',
 			'--task', $task,
-			'--text', '-'
+			'--text', '-',
+            '--model', $modelFileName
 		];
 
 		$this->logger->debug('Running '.var_export($command, true));
 
 		$proc = new Process($command, __DIR__);
 		$proc->setEnv([
-			'LLM_THREADS' => $this->settingsService->getSetting('threads')
+			'LLM_THREADS' => $this->settingsService->getSetting('threads'),
 		]);
 		$proc->setInput($input);
 		$proc->setTimeout($timeout);

@@ -7,17 +7,19 @@ declare(strict_types=1);
 namespace OCA\Llm\Command;
 
 use OCA\Llm\Service\DownloadModelsService;
+use OCA\Llm\Service\SettingsService;
 use Symfony\Component\Console\Command\Command;
+use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
 class DownloadModels extends Command {
-	private DownloadModelsService $downloader;
-
-	public function __construct(DownloadModelsService $downloader) {
+	public function __construct(
+        private DownloadModelsService $downloader,
+        private SettingsService $settings,
+    ) {
 		parent::__construct();
-		$this->downloader = $downloader;
 	}
 
 	/**
@@ -26,9 +28,10 @@ class DownloadModels extends Command {
 	 * @return void
 	 */
 	protected function configure() {
-		$this->setName('llm:download-models')
-			->setDescription('Download the necessary machine learning models');
+		$this->setName('llm:download-model')
+			->setDescription('Download the necessary machine learning model (~4GB)');
 		$this->addOption('force', 'f', InputOption::VALUE_NONE, 'Force download even if the model(s) are downloaded already');
+		$this->addArgument('model', InputArgument::OPTIONAL, 'Choose the model to download, either "llama-2" (default) or "gpt4all-falcon"', DownloadModelsService::MODEL_LLAMA);
 	}
 
 	/**
@@ -42,11 +45,12 @@ class DownloadModels extends Command {
 	protected function execute(InputInterface $input, OutputInterface $output): int {
 		try {
 			$output->writeln("Downloading model");
-			if ($this->downloader->download($input->getOption('force'))) {
+			if ($this->downloader->download($input->getArgument('model'), $input->getOption('force'))) {
 				$output->writeln('Successful');
+                $this->settings->setSetting('model', $input->getArgument('model'));
 			}
 		} catch (\Exception $ex) {
-			$output->writeln('<error>Failed to download models</error>');
+			$output->writeln('<error>Failed to download model</error>');
 			$output->writeln($ex->getMessage());
 			return 1;
 		}

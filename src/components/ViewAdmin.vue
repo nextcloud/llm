@@ -8,11 +8,11 @@ SPDX-License-Identifier: AGPL-3.0-or-later
 		<figure v-if="loading" class="icon-loading loading" />
 		<figure v-if="!loading && success" class="icon-checkmark success" />
 		<NcSettingsSection :title="t('llm', 'Status')">
-			<NcNoteCard v-if="modelsDownloaded" show-alert type="success">
-				{{ t('llm', 'Machine learning models have been downloaded successfully.') }}
+			<NcNoteCard v-if="modelsDownloaded[settings['model']]" show-alert type="success">
+				{{ t('llm', 'Machine learning model has been downloaded successfully.') }}
 			</NcNoteCard>
 			<NcNoteCard v-else type="error">
-				{{ t('llm', 'The machine learning models still need to be downloaded (see below).') }}
+				{{ t('llm', 'The machine learning model still needs to be downloaded (see below).') }}
 			</NcNoteCard>
 			<NcNoteCard v-if="python === false" type="error">
 				{{ t('llm', 'Could not execute python. You may need to set the path to a working executable manually. (See below.)') }}
@@ -22,10 +22,25 @@ SPDX-License-Identifier: AGPL-3.0-or-later
 			</NcNoteCard>
 			<template v-if="python && cron === 'cron'">
 				<NcNoteCard show-alert type="success">
-					{{ t('llm', 'The app was installed successfully and will transcribe files in background processes on request.') }}
+					{{ t('llm', 'The app was installed successfully and will run prompts in background processes on request.') }}
 				</NcNoteCard>
 			</template>
 		</NcSettingsSection>
+    <NcSettingsSection :title="t('llm', 'Model settings')">
+      <NcNoteCard v-if="modelsDownloaded[settings['model']]" show-alert type="success">
+        {{ t('llm', 'Machine learning model has been downloaded successfully.') }}
+      </NcNoteCard>
+      <NcNoteCard v-else type="error">
+        {{ t('llm', 'The machine learning model still needs to be downloaded (see below).') }}
+      </NcNoteCard>
+      <p>{{ t('llm', 'Choose the machine learning model to be used.') }}</p>
+      <p>
+        <NcCheckboxRadioSwitch :checked.sync="settings['model']" type="radio" value="llama-2" @update:checked="onChange">{{ t('llm', 'Llama2 7B (Recommended)') }}</NcCheckboxRadioSwitch>
+        <NcCheckboxRadioSwitch :checked.sync="settings['model']" type="radio" value="gpt4all-falcon" @update:checked="onChange">{{ t('llm', 'GPT4All Falcon') }}</NcCheckboxRadioSwitch>
+      </p>
+      <p>{{ t('llm', 'To download the machine learning model, you need to excecute the occ command line interface of Nextcloud on your server terminal with the following command:') }}</p>
+      <p><code>occ llm:download-model {{ settings['model'] }}</code></p>
+    </NcSettingsSection>
 		<NcSettingsSection :title="t('llm', 'Inference settings')">
 			<p>
 				<NcTextField :value.sync="settings['threads']"
@@ -55,7 +70,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
 </template>
 
 <script>
-import { NcNoteCard, NcSettingsSection, NcTextField } from '@nextcloud/vue'
+import { NcNoteCard, NcSettingsSection, NcTextField, NcCheckboxRadioSwitch } from '@nextcloud/vue'
 import axios from '@nextcloud/axios'
 import { generateUrl } from '@nextcloud/router'
 import { loadState } from '@nextcloud/initial-state'
@@ -63,11 +78,12 @@ import { loadState } from '@nextcloud/initial-state'
 const SETTINGS = [
 	'python_binary',
 	'threads',
+  'model'
 ]
 
 export default {
 	name: 'ViewAdmin',
-	components: { NcSettingsSection, NcNoteCard, NcTextField },
+	components: { NcSettingsSection, NcNoteCard, NcTextField, NcCheckboxRadioSwitch },
 
 	data() {
 		return {
@@ -102,7 +118,7 @@ export default {
 		try {
 			const settings = loadState('llm', 'settings')
 			for (const setting of SETTINGS) {
-				this.settings[setting] = JSON.parse(settings[setting])
+				this.settings[setting] = settings[setting]
 			}
 		} catch (e) {
 			this.error = this.t('llm', 'Failed to load settings')
@@ -144,7 +160,6 @@ export default {
 
 		async setValue(setting, value) {
 			try {
-				value = JSON.stringify(value)
 				await axios.put(generateUrl(`/apps/llm/admin/settings/${setting}`), {
 					value,
 				})

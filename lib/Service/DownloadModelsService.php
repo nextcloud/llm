@@ -6,6 +6,7 @@ declare(strict_types=1);
 
 namespace OCA\Llm\Service;
 
+use Exception;
 use FilesystemIterator;
 use OCP\Http\Client\IClientService;
 use RecursiveDirectoryIterator;
@@ -15,7 +16,13 @@ class DownloadModelsService {
 	private IClientService $clientService;
 	private bool $isCLI;
 
-	public const MODEL_NAME = 'ggml-model-gpt4all-falcon-q4_0.bin';
+    public const MODEL_LLAMA = 'llama-2';
+    public const MODEL_GPT4ALL_FALCON = 'gpt4all-falcon';
+
+    public const MODELS = [
+      self::MODEL_LLAMA => 'https://download.nextcloud.com/server/apps/llm/llama-2-7b-chat-ggml/llama-2-7b-chat.ggmlv3.q4_0.bin',
+      self::MODEL_GPT4ALL_FALCON => 'https://download.nextcloud.com/server/apps/llm/ggml-model-gpt4all-falcon-q4_0.bin'
+    ];
 
 	public function __construct(IClientService $clientService, bool $isCLI) {
 		$this->clientService = $clientService;
@@ -26,8 +33,13 @@ class DownloadModelsService {
 	 * @return bool
 	 * @throws \Exception
 	 */
-	public function download($force = false) : bool {
-		$modelPath = __DIR__ . '/../../src-py/models/' . self::MODEL_NAME;
+	public function download($model, $force = false) : bool {
+        if (!in_array($model, array_keys(self::MODELS))) {
+            throw new Exception('Unknown model');
+        }
+        $modelUrl = self::MODELS[$model];
+        $modelFileName = basename($modelUrl);
+		$modelPath = __DIR__ . '/../../src-py/models/' . $modelFileName;
 		if (file_exists($modelPath)) {
 			if ($force) {
 				// remove model directory
@@ -46,13 +58,8 @@ class DownloadModelsService {
 				return true;
 			}
 		}
-		$modelUrl = $this->getModelUrl(self::MODEL_NAME);
 		$timeout = $this->isCLI ? 0 : 480;
 		$this->clientService->newClient()->get($modelUrl, ['sink' => $modelPath, 'timeout' => $timeout]);
 		return true;
-	}
-
-	public function getModelUrl(string $model): string {
-		return "https://download.nextcloud.com/server/apps/llm/$model";
 	}
 }
