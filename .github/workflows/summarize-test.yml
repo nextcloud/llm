@@ -97,6 +97,7 @@ jobs:
         run: |
           make all
           composer install --no-dev
+          sudo apt install python3
 
       - name: Set up Nextcloud and install app
         if: ${{ matrix.databases != 'pgsql'}}
