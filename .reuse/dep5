@@ -10,3 +10,7 @@ License: AGPL-3.0-or-later
 Files: l10n/*.js l10n/*.json
 Copyright: Nextcloud translators <https://www.transifex.com/nextcloud/>
 License: AGPL-3.0-or-later
+
+Files: tests/fixtures/*
+Copyright: Marcel Klehr <mklehr@gmx.net>
+License: CC0-1.0
