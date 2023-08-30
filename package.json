@@ -1,7 +1,7 @@
 {
   "name": "llm",
   "description": "A Large language model in nextcloud",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "author": "Marcel Klehr <mklehr@gmx.net>",
   "contributors": [],
   "bugs": {
@@ -31,8 +31,8 @@
     "extends @nextcloud/browserslist-config"
   ],
   "engines": {
-    "node": "^18.0.0",
-    "npm": "^7.0.0 || ^8.0.0 || ^9.0.0"
+    "node": "^20.0.0",
+    "npm": "^9.0.0"
   },
   "devDependencies": {
     "@nextcloud/babel-config": "^1.0.0",
