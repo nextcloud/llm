@@ -7,9 +7,15 @@ SPDX-License-Identifier: CC0-1.0
 
 # A large language model in Nextcloud
 
-This app ships a TextProcessing provider using a GPT4All Large Language Model by Nomic AI  that runs locally on CPU
+This app ships a TextProcessing provider using a Large Language Model that runs locally on CPU
 
 The models run completely on your machine. No private data leaves your servers.
+
+Models:
+
+* Llama 2 by Meta ([LLAMA 2 Community License](https://download.nextcloud.com/server/apps/llm/llama-2-7b-chat-ggml/LICENSE))
+* GPT4All Falcon by Nomic AI ([Apache License 2.0](https://download.nextcloud.com/server/apps/llm/LICENSE))
+
 
 Requirements:
 

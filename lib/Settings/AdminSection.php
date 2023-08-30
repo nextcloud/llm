@@ -36,7 +36,7 @@ class AdminSection implements IIconSection {
 	 * @return string
 	 */
 	public function getName(): string {
-		return $this->l->t('Large language model');
+		return $this->l->t('Local Large language model');
 	}
 
 	/**

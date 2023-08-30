@@ -6,10 +6,10 @@
     SPDX-License-Identifier: CC0-1.0
     -->
     <id>llm</id>
-    <name>Local GPT4ALL Large language model</name>
-    <summary>TextProcessing provider using a GPT4All Large Language Model by Nomic AI that runs locally on CPU</summary>
+    <name>Local Large language model</name>
+    <summary>TextProcessing provider using a Large Language Model that runs locally on CPU</summary>
     <description><![CDATA[
-A TextProcessing provider using a GPT4All Large Language Model by Nomic AI  that runs locally on CPU
+A TextProcessing provider Large Language Model that runs locally on CPU
 
 The models run completely on your machine. No private data leaves your servers.
 
@@ -17,18 +17,34 @@ After installing this app you will need to run
 
     occ llm:download-models
 
+Models:
+
+* Llama 2 by Meta ([LLAMA 2 Community License](https://download.nextcloud.com/server/apps/llm/llama-2-7b-chat-ggml/LICENSE))
+* GPT4All Falcon by Nomic AI ([Apache License 2.0](https://download.nextcloud.com/server/apps/llm/LICENSE))
+
 Requirements:
 
 * x86 CPU
 * GNU lib C (musl is not supported)
 * Python 3.10+
 
-## Ethical AI Rating
+## Ethical AI Rating "Llama 2" model
+### Rating: 🟡
+
+Positive:
+* the software for training and inference of this model is open source
+* the trained model is freely available, and thus can be run on-premises
+
+Negative:
+
+* the training data is not freely available, limiting the ability of external parties to check and correct for bias or optimise the model’s performance and CO2 usage.
+
+## Ethical AI Rating for "GPT4All Falcon" model
 ### Rating: 🟢
 
 Positive:
 * the software for training and inference of this model is open source
-* the trained model is freely available, and thus can be ran on-premises
+* the trained model is freely available, and thus can be run on-premises
 * the training data is freely available, making it possible to check or correct for bias or optimise the performance and CO2 usage.
 
 Learn more about the Nextcloud Ethical AI Rating [in our blog](https://nextcloud.com/blog/nextcloud-ethical-ai-rating/).
