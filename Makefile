@@ -145,6 +145,7 @@ appstore:
 	--include=/appinfo \
 	--include=/vendor \
 	--include=/templates \
+	--include=/LICENSES \
 	--include=/js \
 	--include=/src-py \
 	--exclude=/src-py/models/** \
