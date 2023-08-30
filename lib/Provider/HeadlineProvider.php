@@ -17,7 +17,7 @@ class HeadlineProvider implements IProvider {
 	}
 
 	public function getName(): string {
-        return 'Nextcloud Large Language Model App';
+        return 'Local Large Language Model';
 	}
 
 	public function process(string $prompt): string {
