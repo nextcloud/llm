@@ -42,7 +42,7 @@ Learn more about the Nextcloud Ethical AI Rating [in our blog](https://nextcloud
     <bugs>https://github.com/nextcloud/llm/issues</bugs>
     <screenshot>https://raw.githubusercontent.com/nextcloud/llm/main/screenshots/Logo.png</screenshot>
     <dependencies>
-        <nextcloud min-version="28" max-version="28"/>
+        <nextcloud min-version="27.1" max-version="28"/>
     </dependencies>
 
     <repair-steps>
