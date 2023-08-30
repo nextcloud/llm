@@ -15,7 +15,7 @@ The models run completely on your machine. No private data leaves your servers.
 
 After installing this app you will need to run
 
-    occ llm:download-models
+    occ llm:download-model
 
 Models:
 

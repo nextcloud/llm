@@ -122,7 +122,7 @@ jobs:
 
       - name: Download models
         run: |
-          ./occ llm:download-models
+          ./occ llm:download-model
 
       - name: Run transcription
         run: |
