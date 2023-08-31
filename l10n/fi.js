@@ -1,10 +1,7 @@
 OC.L10N.register(
     "llm",
     {
-    "Large language model" : "Suuri kielimalli",
     "Status" : "Tila",
-    "Machine learning models have been downloaded successfully." : "Koneoppimismallit on ladattu onnistuneesti.",
-    "The machine learning models still need to be downloaded (see below)." : "Koneoppimismallit tulee ladata (katso alle).",
     "Python" : "Python",
     "Checking Python" : "Tarkistetaan Pythonia",
     "Failed to load settings" : "Asetusten lataaminen epäonnistui",

@@ -1,12 +1,8 @@
 OC.L10N.register(
     "llm",
     {
-    "Large language model" : "Велика мовна модель",
     "Status" : "Статус",
-    "Machine learning models have been downloaded successfully." : "Завантаження моделей машинного навчання відбулося успішно.",
-    "The machine learning models still need to be downloaded (see below)." : "Моделі машинного навчання все ще потрібно завантажити (див. нижче).",
     "Background Jobs are not executed via cron. This app requires background jobs to be executed via cron." : "Фонові завдання не виконуються через cron. Ця програма вимагає, щоб фонові завдання виконувалися тільки через cron.",
-    "The app was installed successfully and will transcribe files in background processes on request." : "Додаток було успішно встановлено, і він буде розшифровувати файли у фонових процесах за запитом.",
     "Failed to load settings" : "Не вдалося завантажити налаштування",
     "Failed to save settings" : "Неможливо зберегти налаштування"
 },
