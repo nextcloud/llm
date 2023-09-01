@@ -1,6 +1,9 @@
 OC.L10N.register(
     "llm",
     {
+    "Status" : "Статус",
+    "Python" : "Python",
+    "Checking Python" : "Проверка на Python",
     "Failed to load settings" : "Неуспешно вчитување на параметрите",
     "Failed to save settings" : "Неуспешно зачувување на параметрите"
 },
