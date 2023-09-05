@@ -6,9 +6,12 @@ declare(strict_types=1);
 
 namespace OCA\Llm\AppInfo;
 
+use OCA\Llm\Provider\FormalizeProvider;
 use OCA\Llm\Provider\FreePromptProvider;
 use OCA\Llm\Provider\HeadlineProvider;
+use OCA\Llm\Provider\SimplifyProvider;
 use OCA\Llm\Provider\SummaryProvider;
+use OCA\Llm\Provider\TopicsProvider;
 use OCP\AppFramework\App;
 use OCP\AppFramework\Bootstrap\IBootContext;
 use OCP\AppFramework\Bootstrap\IBootstrap;
@@ -25,6 +28,9 @@ class Application extends App implements IBootstrap {
 		$context->registerTextProcessingProvider(FreePromptProvider::class);
 		$context->registerTextProcessingProvider(SummaryProvider::class);
 		$context->registerTextProcessingProvider(HeadlineProvider::class);
+		$context->registerTextProcessingProvider(TopicsProvider::class);
+		$context->registerTextProcessingProvider(SimplifyProvider::class);
+		$context->registerTextProcessingProvider(FormalizeProvider::class);
 	}
 
 	public function boot(IBootContext $context): void {
