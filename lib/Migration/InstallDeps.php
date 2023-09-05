@@ -32,7 +32,7 @@ class InstallDeps implements IRepairStep {
 		chdir(dirname(__DIR__, 2));
 		$venv = dirname(__DIR__, 2) . '/python';
 		$python = $venv . '/bin/';
-		$env = 'PATH='.escapeshellcmd($venv).'/bin:'.':$PATH VIRTUAL_ENV=' . escapeshellcmd($venv);
+		$env = 'PATH='.escapeshellcmd($venv).'/bin:'.'$PATH VIRTUAL_ENV=' . escapeshellcmd($venv) . ' POETRY_CACHE_DIR=' . escapeshellcmd($venv . '/.cache');
 		try {
 			$output = '';
 			$cmd0 = ($this->settingsService->getSetting('python_binary') !== '' ? $this->settingsService->getSetting('python_binary') : 'python3') . ' -m venv ./python';
