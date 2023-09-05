@@ -1,7 +1,7 @@
 {
   "name": "llm",
   "description": "A Large language model in nextcloud",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Marcel Klehr <mklehr@gmx.net>",
   "contributors": [],
   "bugs": {
