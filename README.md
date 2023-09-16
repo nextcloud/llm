@@ -13,9 +13,12 @@ The models run completely on your machine. No private data leaves your servers.
 
 Models:
 
-* Llama 2 by Meta ([LLAMA 2 Community License](https://download.nextcloud.com/server/apps/llm/llama-2-7b-chat-ggml/LICENSE))
-* GPT4All Falcon by Nomic AI ([Apache License 2.0](https://download.nextcloud.com/server/apps/llm/LICENSE))
-
+* Llama 2 by Meta
+  * Languages: English
+  * [LLAMA 2 Community License](https://download.nextcloud.com/server/apps/llm/llama-2-7b-chat-ggml/LICENSE)
+* GPT4All Falcon by Nomic AI
+  * Languages: English
+  * [Apache License 2.0](https://download.nextcloud.com/server/apps/llm/LICENSE)
 
 Requirements:
 
