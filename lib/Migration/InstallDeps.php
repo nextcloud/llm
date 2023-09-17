@@ -51,7 +51,8 @@ class InstallDeps implements IRepairStep {
 				throw new \Exception('Failed to install pipx: '.$cmd1.' returned '.trim(implode("\n", $output)));
 			}
 			$output = '';
-			$cmd2 = $env . ' PIPX_HOME=' . $venv .  ' ' . 'PIPX_BIN_DIR=' . $python . ' ' .escapeshellcmd($python . 'python3') . ' ' . escapeshellcmd($python . 'pipx') . ' install poetry';
+            // "< 1.4" avoids https://github.com/python-poetry/poetry/issues/7611
+			$cmd2 = $env . ' PIPX_HOME=' . $venv .  ' ' . 'PIPX_BIN_DIR=' . $python . ' ' .escapeshellcmd($python . 'python3') . ' ' . escapeshellcmd($python . 'pipx') . ' install poetry < 1.4';
 			exec($cmd2 . ' 2>&1', $output, $returnCode); // Appending  2>&1 to avoid leaking sterr
 			if ($returnCode !== 0) {
 				chdir($oriCwd);
