@@ -1,5 +1,23 @@
 { "translations": {
+    "Rephrase the text to be more formal and polite instead of casual." : "Перефразируйте текст, чтобы он был более формальным и вежливым, а не случайным.",
+    "Simplify" : "Упростить",
+    "Make the text easier to understand." : "Сделайте текст более понятным.",
     "Status" : "Состояние",
+    "Machine learning model has been downloaded successfully." : "Модель машинного обучения успешно загружена.",
+    "The machine learning model still needs to be downloaded (see below)." : "Модель машинного обучения еще необходимо загрузить (см. ниже).",
+    "Could not execute python. You may need to set the path to a working executable manually. (See below.)" : "Не удалось выполнить Python. Возможно, вам придется вручную указать путь к рабочему исполняемому файлу. (См. ниже.)",
+    "Background Jobs are not executed via cron. This app requires background jobs to be executed via cron." : "Фоновые задания не выполняются через cron. Это приложение требует выполнения фоновых заданий через cron.",
+    "The app was installed successfully and will run prompts in background processes on request." : "Приложение было успешно установлено и по запросу будет запускать подсказки в фоновых процессах.",
+    "Model settings" : "Настройки модели",
+    "Choose the machine learning model to be used." : "Выберите модель машинного обучения, которая будет использоваться.",
+    "To download the machine learning model, you need to excecute the occ command line interface of Nextcloud on your server terminal with the following command:" : "Чтобы загрузить модель машинного обучения, вам необходимо запустить интерфейс командной строки occ Nextcloud на вашем серверном терминале с помощью следующей команды:",
+    "Inference settings" : "Настройки вывода",
+    "The number of threads to use for inference (more is faster)" : "Количество потоков, используемых для вывода (чем больше, тем быстрее)",
+    "Python" : "Python",
+    "Checking Python" : "Проверка Python",
+    "Could not execute Python. You may need to set the path to a working executable manually." : "Не удалось выполнить Python. Возможно, вам придется вручную указать путь к рабочему исполняемому файлу.",
+    "Python executable executed successfully and setup works." : "Исполняемый файл Python выполнен успешно, установка работает.",
+    "If Python is not found automatically on your system for some reason you can set the path to the Python executable here. If you change this value, make sure to run occ maintenance:repair afterwards." : "Если по какой-то причине Python не обнаруживается автоматически в вашей системе, вы можете указать здесь путь к исполняемому файлу Python. Если вы измените это значение, обязательно после этого запустите occ maintenance:repair",
     "Failed to load settings" : "Не удалось загрузить параметры",
     "Failed to save settings" : "Не удалось сохранить параметры"
 },"pluralForm" :"nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);"
