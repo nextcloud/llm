@@ -24,7 +24,7 @@ Requirements:
 
 * x86 CPU
 * GNU lib C (musl is not supported)
-* Python 3.10+
+* Python 3.10+ (including python-venv)
 
 ## Ethical AI Rating
 ### Rating: 🟢
