@@ -26,6 +26,10 @@ Requirements:
 * GNU lib C (musl is not supported)
 * Python 3.10+ (including python-venv)
 
+#### Nextcloud All-in-One:
+With Nextcloud AIO, this app is not going to work because AIO uses musl. However you can use [this community container](https://github.com/nextcloud/all-in-one/tree/main/community-containers/local-ai) as replacement for this app.
+
+
 ## Ethical AI Rating
 ### Rating: 🟢
 
