@@ -21,9 +21,14 @@ jobs:
       # do not stop on another job's failure
       fail-fast: false
       matrix:
-        php-versions: [ '8.0', '8.1', '8.2' ]
+        php-versions: [ '8.1', '8.2' ]
         databases: [ 'sqlite' ]
         server-versions: [ 'master', 'stable27' ]
+        include:
+          - php-versions: '8.0'
+            server-versions: 'stable27'
+          - php-versions: '8.3'
+            server-versions: 'master'
 
     name: Test summarize command on ${{ matrix.server-versions }} php@${{ matrix.php-versions }}
 
