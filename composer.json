@@ -13,7 +13,8 @@
 		"nextcloud/ocp": "dev-master@dev",
 		"psalm/phar": "^4.10",
 		"nextcloud/coding-standard": "^1",
-		"friendsofphp/php-cs-fixer": "^3"
+		"friendsofphp/php-cs-fixer": "^3",
+		"symfony/console": "^v6.3.4"
 	},
 	"scripts": {
 		"lint": "find . -name \\*.php -not -path './vendor/*' -print0 | xargs -0 -n1 php -l",
@@ -30,7 +31,7 @@
 			"composer/package-versions-deprecated": true
 		},
 		"platform": {
-			"php": "8.0"
+			"php": "8.1.0"
 		}
 	},
 	"require": {
