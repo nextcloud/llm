@@ -2,6 +2,7 @@ OC.L10N.register(
     "llm",
     {
     "Status" : "Stav",
+    "If Python is not found automatically on your system for some reason you can set the path to the Python executable here. If you change this value, make sure to run occ maintenance:repair afterwards." : "Ak sa z nejakého dôvodu na vašom systéme nenašiel Python, môžete na tomto mieste nastaviť cestu ku spustiteľnému súboru Pythonu. V prípade, že zmeníte túto hodnotu, zabezpečte, aby bol následne spustený príkaz occ maintenance:repair.",
     "Failed to load settings" : "Nepodarilo sa načítať nastavenia",
     "Failed to save settings" : "Nepodarilo sa uložiť nastavenia"
 },
