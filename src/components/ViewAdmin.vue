@@ -39,13 +39,13 @@ SPDX-License-Identifier: AGPL-3.0-or-later
 					type="radio"
 					value="llama-2"
 					@update:checked="onChange">
-					{{ t('llm', 'Llama2 7B (Recommended)') }}
+					{{ 'Llama2 7B (' + t('llm', 'Recommended') + ')' }}
 				</NcCheckboxRadioSwitch>
 				<NcCheckboxRadioSwitch :checked.sync="settings['model']"
 					type="radio"
 					value="gpt4all-falcon"
 					@update:checked="onChange">
-					{{ t('llm', 'GPT4All Falcon') }}
+					{{ 'GPT4All Falcon' }}
 				</NcCheckboxRadioSwitch>
 			</p>
 			<p>{{ t('llm', 'To download the machine learning model, you need to excecute the occ command line interface of Nextcloud on your server terminal with the following command:') }}</p>
