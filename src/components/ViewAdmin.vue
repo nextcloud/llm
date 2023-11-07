@@ -26,21 +26,31 @@ SPDX-License-Identifier: AGPL-3.0-or-later
 				</NcNoteCard>
 			</template>
 		</NcSettingsSection>
-    <NcSettingsSection :title="t('llm', 'Model settings')">
-      <NcNoteCard v-if="modelsDownloaded[settings['model']]" show-alert type="success">
-        {{ t('llm', 'Machine learning model has been downloaded successfully.') }}
-      </NcNoteCard>
-      <NcNoteCard v-else type="error">
-        {{ t('llm', 'The machine learning model still needs to be downloaded (see below).') }}
-      </NcNoteCard>
-      <p>{{ t('llm', 'Choose the machine learning model to be used.') }}</p>
-      <p>
-        <NcCheckboxRadioSwitch :checked.sync="settings['model']" type="radio" value="llama-2" @update:checked="onChange">{{ t('llm', 'Llama2 7B (Recommended)') }}</NcCheckboxRadioSwitch>
-        <NcCheckboxRadioSwitch :checked.sync="settings['model']" type="radio" value="gpt4all-falcon" @update:checked="onChange">{{ t('llm', 'GPT4All Falcon') }}</NcCheckboxRadioSwitch>
-      </p>
-      <p>{{ t('llm', 'To download the machine learning model, you need to excecute the occ command line interface of Nextcloud on your server terminal with the following command:') }}</p>
-      <p><code>occ llm:download-model {{ settings['model'] }}</code></p>
-    </NcSettingsSection>
+		<NcSettingsSection :title="t('llm', 'Model settings')">
+			<NcNoteCard v-if="modelsDownloaded[settings['model']]" show-alert type="success">
+				{{ t('llm', 'Machine learning model has been downloaded successfully.') }}
+			</NcNoteCard>
+			<NcNoteCard v-else type="error">
+				{{ t('llm', 'The machine learning model still needs to be downloaded (see below).') }}
+			</NcNoteCard>
+			<p>{{ t('llm', 'Choose the machine learning model to be used.') }}</p>
+			<p>
+				<NcCheckboxRadioSwitch :checked.sync="settings['model']"
+					type="radio"
+					value="llama-2"
+					@update:checked="onChange">
+					{{ t('llm', 'Llama2 7B (Recommended)') }}
+				</NcCheckboxRadioSwitch>
+				<NcCheckboxRadioSwitch :checked.sync="settings['model']"
+					type="radio"
+					value="gpt4all-falcon"
+					@update:checked="onChange">
+					{{ t('llm', 'GPT4All Falcon') }}
+				</NcCheckboxRadioSwitch>
+			</p>
+			<p>{{ t('llm', 'To download the machine learning model, you need to excecute the occ command line interface of Nextcloud on your server terminal with the following command:') }}</p>
+			<p><code>occ llm:download-model {{ settings['model'] }}</code></p>
+		</NcSettingsSection>
 		<NcSettingsSection :title="t('llm', 'Inference settings')">
 			<p>
 				<NcTextField :value.sync="settings['threads']"
@@ -78,7 +88,7 @@ import { loadState } from '@nextcloud/initial-state'
 const SETTINGS = [
 	'python_binary',
 	'threads',
-  'model'
+	'model',
 ]
 
 export default {
