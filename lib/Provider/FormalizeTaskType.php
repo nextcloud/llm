@@ -16,10 +16,10 @@ class FormalizeTaskType implements ITaskType {
 	}
 
 	public function getName(): string {
-        return $this->l10n->t('Formalize');
+		return $this->l10n->t('Formalize');
 	}
 
-    public function getDescription(): string {
-        return $this->l10n->t('Rephrase the text to be more formal and polite instead of casual.');
-    }
+	public function getDescription(): string {
+		return $this->l10n->t('Rephrase the text to be more formal and polite instead of casual.');
+	}
 }

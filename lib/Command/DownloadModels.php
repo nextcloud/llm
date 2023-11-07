@@ -16,9 +16,9 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class DownloadModels extends Command {
 	public function __construct(
-        private DownloadModelsService $downloader,
-        private SettingsService $settings,
-    ) {
+		private DownloadModelsService $downloader,
+		private SettingsService $settings,
+	) {
 		parent::__construct();
 	}
 
@@ -47,7 +47,7 @@ class DownloadModels extends Command {
 			$output->writeln("Downloading model");
 			if ($this->downloader->download($input->getArgument('model'), $input->getOption('force'))) {
 				$output->writeln('Successful');
-                $this->settings->setSetting('model', $input->getArgument('model'));
+				$this->settings->setSetting('model', $input->getArgument('model'));
 			}
 		} catch (\Exception $ex) {
 			$output->writeln('<error>Failed to download model</error>');

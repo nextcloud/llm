@@ -42,7 +42,7 @@ class Summarize extends Command {
 		try {
 			$output->writeln($this->llm->call(
 				$input->getArgument('input'),
-                'summarize'
+				'summarize'
 			));
 			return 0;
 		} catch(\RuntimeException $e) {
