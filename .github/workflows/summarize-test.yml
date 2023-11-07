@@ -10,6 +10,10 @@ on:
       - main
       - stable*
 
+concurrency:
+  group: summarize-test-${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
 env:
   APP_NAME: llm
 
