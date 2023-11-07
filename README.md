@@ -41,6 +41,11 @@ Positive:
 Learn more about the Nextcloud Ethical AI Rating [in our blog](https://nextcloud.com/blog/nextcloud-ethical-ai-rating/).
 
 ## Install
+
+Make sure to have the submodules checked out:
+
+	git submodule update --init
+
 Place this app in **nextcloud/apps/**
 
 ## Building the app
