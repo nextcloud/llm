@@ -4,8 +4,7 @@
 *.iml
 /vendor/
 /build/
-node_modules/
-/.php_cs.cache
-js/*hot-update.*
-/model
+/node_modules/
+/.php-cs-fixer.cache
+/js/
 /python
