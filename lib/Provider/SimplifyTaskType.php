@@ -5,12 +5,8 @@ declare(strict_types=1);
 // SPDX-License-Identifier: AGPL-3.0-or-later
 namespace OCA\Llm\Provider;
 
-use OCA\Llm\Service\LlmService;
 use OCP\IL10N;
-use OCP\TextProcessing\IProvider;
 use OCP\TextProcessing\ITaskType;
-use OCP\TextProcessing\SummaryTaskType;
-use OCP\TextProcessing\TopicsTaskType;
 
 class SimplifyTaskType implements ITaskType {
 
@@ -20,10 +16,10 @@ class SimplifyTaskType implements ITaskType {
 	}
 
 	public function getName(): string {
-        return $this->l10n->t('Simplify');
+		return $this->l10n->t('Simplify');
 	}
 
-    public function getDescription(): string {
-        return $this->l10n->t('Make the text easier to understand.');
-    }
+	public function getDescription(): string {
+		return $this->l10n->t('Make the text easier to understand.');
+	}
 }

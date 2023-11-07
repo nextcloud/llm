@@ -17,7 +17,7 @@ class SummaryProvider implements IProvider {
 	}
 
 	public function getName(): string {
-        return 'Local Large Language Model';
+		return 'Local Large Language Model';
 	}
 
 	public function process(string $prompt): string {

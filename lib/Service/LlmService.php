@@ -46,15 +46,15 @@ class LlmService {
 			return $output;
 		}
 
-        $model = $this->settingsService->getSetting('model');
-        $modelFileName = basename(DownloadModelsService::MODELS[$model]);
+		$model = $this->settingsService->getSetting('model');
+		$modelFileName = basename(DownloadModelsService::MODELS[$model]);
 
 		$command = [
 			dirname(__DIR__, 2) . '/python/bin/python3',
 			dirname(__DIR__, 2) . '/src-py/index.py',
 			'--task', $task,
 			'--text', '-',
-            '--model', $modelFileName
+			'--model', $modelFileName
 		];
 
 		$this->logger->debug('Running '.var_export($command, true));
