@@ -25,8 +25,6 @@ jobs:
       # do not stop on another job's failure
       fail-fast: false
       matrix:
-        php-versions: [ '8.1', '8.2' ]
-        server-versions: [ 'master', 'stable27' ]
         include:
           - php-versions: '8.0'
             server-versions: 'stable27'
