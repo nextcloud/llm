@@ -2,6 +2,7 @@ OC.L10N.register(
     "llm",
     {
     "Status" : "Status",
+    "Recommended" : "Rekomenderad",
     "Failed to load settings" : "Kunde inte läsa in inställningar",
     "Failed to save settings" : "Kunde inte spara inställningarna"
 },

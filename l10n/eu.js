@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "Status" : "Egoera",
     "Background Jobs are not executed via cron. This app requires background jobs to be executed via cron." : "Atzeko lanak ez dira cron bidez exekutatzen ari. Aplikazio honek atzeko lanak cron bidez exekutatzea behar du.",
+    "Recommended" : "Aholkatuta",
     "Inference settings" : "Interferentzia ezarpenak",
     "Python" : "Python",
     "Checking Python" : "Python egiaztatzen",

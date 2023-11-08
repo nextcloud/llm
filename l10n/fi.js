@@ -2,6 +2,7 @@ OC.L10N.register(
     "llm",
     {
     "Status" : "Tila",
+    "Recommended" : "Suositeltu",
     "Python" : "Python",
     "Checking Python" : "Tarkistetaan Pythonia",
     "Failed to load settings" : "Asetusten lataaminen epäonnistui",

@@ -12,6 +12,7 @@ OC.L10N.register(
     "The app was installed successfully and will run prompts in background processes on request." : "Приложение было успешно установлено и по запросу будет запускать подсказки в фоновых процессах.",
     "Model settings" : "Настройки модели",
     "Choose the machine learning model to be used." : "Выберите модель машинного обучения, которая будет использоваться.",
+    "Recommended" : "Рекомендовано",
     "To download the machine learning model, you need to excecute the occ command line interface of Nextcloud on your server terminal with the following command:" : "Чтобы загрузить модель машинного обучения, вам необходимо запустить интерфейс командной строки occ Nextcloud на вашем серверном терминале с помощью следующей команды:",
     "Inference settings" : "Настройки вывода",
     "The number of threads to use for inference (more is faster)" : "Количество потоков, используемых для вывода (чем больше, тем быстрее)",

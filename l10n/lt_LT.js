@@ -2,6 +2,7 @@ OC.L10N.register(
     "llm",
     {
     "Status" : "Būsena",
+    "Recommended" : "Rekomenduojama",
     "Failed to load settings" : "Nepavyko įkelti nustatymų",
     "Failed to save settings" : "Nepavyko įrašyti nustatymų"
 },

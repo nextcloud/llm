@@ -4,6 +4,7 @@ OC.L10N.register(
     "Status" : "Status",
     "Could not execute python. You may need to set the path to a working executable manually. (See below.)" : "Could not execute python. You may need to set the path to a working executable manually. (See below.)",
     "Background Jobs are not executed via cron. This app requires background jobs to be executed via cron." : "Background Jobs are not executed via cron. This app requires background jobs to be executed via cron.",
+    "Recommended" : "پیشنهاد شده",
     "Inference settings" : "Inference settings",
     "The number of threads to use for inference (more is faster)" : "The number of threads to use for inference (more is faster)",
     "Python" : "Python",

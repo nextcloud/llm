@@ -2,6 +2,7 @@ OC.L10N.register(
     "llm",
     {
     "Status" : "Status",
+    "Recommended" : "Preporuceno",
     "Failed to load settings" : "Učitavanje postavki nije uspjelo",
     "Failed to save settings" : "Spremanje postavki nije uspjelo"
 },

@@ -2,6 +2,7 @@ OC.L10N.register(
     "llm",
     {
     "Status" : "Stanje",
+    "Recommended" : "Priporočeno",
     "Failed to load settings" : "Nalaganje nastavitev je spodletelo.",
     "Failed to save settings" : "Shranjevanje nastavitev je spodletelo"
 },

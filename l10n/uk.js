@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "Status" : "Статус",
     "Background Jobs are not executed via cron. This app requires background jobs to be executed via cron." : "Фонові завдання не виконуються через cron. Ця програма вимагає, щоб фонові завдання виконувалися тільки через cron.",
+    "Recommended" : "Рекомендуємо",
     "Failed to load settings" : "Не вдалося завантажити налаштування",
     "Failed to save settings" : "Неможливо зберегти налаштування"
 },

@@ -14,8 +14,6 @@
     "The app was installed successfully and will run prompts in background processes on request." : "تم تثبيت التطبيق بنجاح وسيتم تشغيل المطالبات في العمليات الخلفية عند الطلب.",
     "Model settings" : "إعدادات النموذج",
     "Choose the machine learning model to be used." : "إختَر نموذج التعلُّم الآلي الذي ترغب في استخدامه.",
-    "Llama2 7B (Recommended)" : "Llama2 7B (يُوصى به)",
-    "GPT4All Falcon" : "GPT4All Falcon",
     "To download the machine learning model, you need to excecute the occ command line interface of Nextcloud on your server terminal with the following command:" : "لتنزيل نموذج التعلٌّم الآلي، تحتاج إلى تنفيذ أمر نكست كلاود السطري occ التالي على جهاز خادومك:",
     "Inference settings" : "إعدادات الاستدلال inference",
     "The number of threads to use for inference (more is faster)" : "عدد الخيوط threads المراد استخدامها للاستدلال (كلما زاد عددها، زادت سرعة الأداء)",
