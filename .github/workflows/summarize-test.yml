@@ -113,7 +113,7 @@ jobs:
 
       - name: Download models
         run: |
-          ./occ llm:download-model
+          ./occ llm:download-model llama-2
 
       - name: Run transcription
         run: |

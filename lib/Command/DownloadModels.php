@@ -31,7 +31,7 @@ class DownloadModels extends Command {
 		$this->setName('llm:download-model')
 			->setDescription('Download the necessary machine learning model (~4GB)');
 		$this->addOption('force', 'f', InputOption::VALUE_NONE, 'Force download even if the model(s) are downloaded already');
-		$this->addArgument('model', InputArgument::OPTIONAL, 'Choose the model to download, either "llama-2" (default) or "gpt4all-falcon"', DownloadModelsService::MODEL_LLAMA);
+		$this->addArgument('model', InputArgument::REQUIRED, 'Choose the model to download: '. implode(", ", array_keys(DownloadModelsService::MODELS)));
 	}
 
 	/**
