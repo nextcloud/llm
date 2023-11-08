@@ -47,7 +47,11 @@ class LlmService {
 		}
 
 		$model = $this->settingsService->getSetting('model');
-		$modelFileName = basename(DownloadModelsService::MODELS[$model]);
+		$modelPath = DownloadModelsService::modelPath($model);
+		if (!file_exists($modelPath)) {
+			throw new \RuntimeException('LLM model not downloaded');
+		}
+		$modelFileName = basename($modelPath);
 
 		$command = [
 			dirname(__DIR__, 2) . '/python/bin/python3',
