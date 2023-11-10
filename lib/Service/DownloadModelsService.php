@@ -33,13 +33,11 @@ class DownloadModelsService {
 	 * @return bool
 	 * @throws \Exception
 	 */
-	public function download($model, $force = false) : bool {
+	public function download(string $model, $force = false): bool {
 		if (!in_array($model, array_keys(self::MODELS))) {
 			throw new Exception('Unknown model');
 		}
-		$modelUrl = self::MODELS[$model];
-		$modelFileName = basename($modelUrl);
-		$modelPath = __DIR__ . '/../../src-py/models/' . $modelFileName;
+		$modelPath = $this->modelPath($model);
 		if (file_exists($modelPath)) {
 			if ($force) {
 				// remove model directory
@@ -59,7 +57,11 @@ class DownloadModelsService {
 			}
 		}
 		$timeout = $this->isCLI ? 0 : 480;
-		$this->clientService->newClient()->get($modelUrl, ['sink' => $modelPath, 'timeout' => $timeout]);
+		$this->clientService->newClient()->get(self::MODELS[$model], ['sink' => $modelPath, 'timeout' => $timeout]);
 		return true;
+	}
+
+	public static function modelPath(string $model): string {
+		return __DIR__ . '/../../src-py/models/' . basename(self::MODELS[$model]);
 	}
 }
