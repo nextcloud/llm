@@ -20,8 +20,8 @@ class DownloadModelsService {
 	public const MODEL_GPT4ALL_FALCON = 'gpt4all-falcon';
 
 	public const MODELS = [
-		self::MODEL_LLAMA => 'https://download.nextcloud.com/server/apps/llm/llama-2-7b-chat-ggml/llama-2-7b-chat.ggmlv3.q4_0.bin',
-		self::MODEL_GPT4ALL_FALCON => 'https://download.nextcloud.com/server/apps/llm/ggml-model-gpt4all-falcon-q4_0.bin'
+		self::MODEL_LLAMA => 'https://download.nextcloud.com/server/apps/llm/llama-2-7b-chat-ggml/llama-2-7b-chat.Q4_K_M.gguf',
+		self::MODEL_GPT4ALL_FALCON => 'https://download.nextcloud.com/server/apps/llm/gpt4all-falcon-q4_0.gguf',
 	];
 
 	public function __construct(IClientService $clientService, bool $isCLI) {
