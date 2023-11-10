@@ -25,6 +25,9 @@ Models:
 * GPT4All Falcon by Nomic AI
   * Languages: English
   * [Apache License 2.0](https://download.nextcloud.com/server/apps/llm/LICENSE)
+* Leo HessianAI by LAION LeoLM
+  * Languages: English/German
+  * [LLAMA 2 Community License](https://download.nextcloud.com/server/apps/llm/leo-hessianai-13B-chat-bilingual-GGUF/LICENSE)
 Requirements:
 
 * x86 CPU
