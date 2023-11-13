@@ -16,6 +16,7 @@ OC.L10N.register(
     "Model settings" : "Paramètres du modèle",
     "Choose the machine learning model to be used." : "Choisissez le modèle d’apprentissage automatique à utiliser.",
     "Recommended" : "Recommandé",
+    "Bilingual: English/German" : "Bilingue : Anglais/Allemand",
     "To download the machine learning model, you need to excecute the occ command line interface of Nextcloud on your server terminal with the following command:" : "Pour télécharger le modèle d'apprentissage automatique, vous devez exécuter l'interface en ligne de commande occ de Nextcloud sur le terminal de votre serveur avec la commande suivante :",
     "Inference settings" : "Paramètres d'inférence",
     "The number of threads to use for inference (more is faster)" : "Le nombre de threads à utiliser pour l'inférence (le plus permet une rapidité plus grande)",
