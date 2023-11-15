@@ -59,7 +59,7 @@ Positive:
 Learn more about the Nextcloud Ethical AI Rating [in our blog](https://nextcloud.com/blog/nextcloud-ethical-ai-rating/).
 
 ]]></description>
-    <version>1.2.0</version>
+    <version>1.2.1</version>
     <licence>agpl</licence>
     <author mail="mklehr@gmx.net" homepage="https://marcelklehr.de">Marcel Klehr</author>
     <namespace>Llm</namespace>
