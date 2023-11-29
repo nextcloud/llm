@@ -8,7 +8,6 @@ namespace OCA\Llm\Provider;
 use OCA\Llm\Service\LlmService;
 use OCP\TextProcessing\IProvider;
 
-
 /**
  * @template-implements IProvider<FormalizeTaskType>
  */

@@ -7,7 +7,6 @@ namespace OCA\Llm\Provider;
 
 use OCA\Llm\Service\LlmService;
 use OCP\TextProcessing\IProvider;
-use OCP\TextProcessing\SummaryTaskType;
 use OCP\TextProcessing\TopicsTaskType;
 
 /**

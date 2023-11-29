@@ -8,7 +8,6 @@ namespace OCA\Llm\Provider;
 use OCA\Llm\Service\LlmService;
 use OCP\TextProcessing\FreePromptTaskType;
 use OCP\TextProcessing\IProvider;
-use OCP\TextProcessing\SummaryTaskType;
 
 /**
  * @template-implements IProvider<FreePromptTaskType>
