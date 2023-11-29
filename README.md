@@ -25,7 +25,7 @@ Models:
 
 Requirements:
 
-* x86 CPU
+* x86 CPU (with support for AVX instructions)
 * GNU lib C (musl is not supported)
 * Python 3.10+ (including python-venv)
 
