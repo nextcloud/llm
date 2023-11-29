@@ -6,17 +6,19 @@ declare(strict_types=1);
 
 namespace OCA\Llm\Command;
 
-use OCA\Llm\Service\LlmService;
+use OCP\TextProcessing\IManager;
+use OCP\TextProcessing\SummaryTaskType;
+use OCP\TextProcessing\Task;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
 class Summarize extends Command {
-	private LlmService $llm;
 
-	public function __construct(LlmService $llm) {
+	public function __construct(
+		private IManager $textProcessing
+	) {
 		parent::__construct();
-		$this->llm = $llm;
 	}
 
 	/**
@@ -40,10 +42,9 @@ class Summarize extends Command {
 	 */
 	protected function execute(InputInterface $input, OutputInterface $output): int {
 		try {
-			$output->writeln($this->llm->call(
-				$input->getArgument('input'),
-				'summarize'
-			));
+			$task = new Task(SummaryTaskType::class, $input->getArgument('input'), 'llm', 'admin');
+			$this->textProcessing->runTask($task);
+			$output->writeln($task->getOutput());
 			return 0;
 		} catch(\RuntimeException $e) {
 			$output->writeln($e->getMessage());
