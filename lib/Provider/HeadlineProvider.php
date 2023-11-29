@@ -9,6 +9,9 @@ use OCA\Llm\Service\LlmService;
 use OCP\TextProcessing\HeadlineTaskType;
 use OCP\TextProcessing\IProvider;
 
+/**
+ * @template-implements IProvider<HeadlineTaskType>
+ */
 class HeadlineProvider implements IProvider {
 
 	public function __construct(

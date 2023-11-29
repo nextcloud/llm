@@ -9,6 +9,9 @@ use OCA\Llm\Service\LlmService;
 use OCP\TextProcessing\FreePromptTaskType;
 use OCP\TextProcessing\IProvider;
 
+/**
+ * @template-implements IProvider<FreePromptTaskType>
+ */
 class FreePromptProvider implements IProvider {
 
 	public function __construct(

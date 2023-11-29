@@ -8,6 +8,9 @@ namespace OCA\Llm\Provider;
 use OCA\Llm\Service\LlmService;
 use OCP\TextProcessing\IProvider;
 
+/**
+ * @template-implements IProvider<SimplifyTaskType>
+ */
 class SimplifyProvider implements IProvider {
 
 	public function __construct(

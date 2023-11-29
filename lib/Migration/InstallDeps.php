@@ -34,7 +34,7 @@ class InstallDeps implements IRepairStep {
 		$python = $venv . '/bin/';
 		$env = 'PATH='.escapeshellcmd($venv).'/bin:'.'$PATH VIRTUAL_ENV=' . escapeshellcmd($venv) . ' POETRY_CACHE_DIR=' . escapeshellcmd($venv . '/.cache');
 		try {
-			$output = '';
+			$output = [];
 			$cmd0 = ($this->settingsService->getSetting('python_binary') !== '' ? $this->settingsService->getSetting('python_binary') : 'python3') . ' -m venv ./python';
 			exec($cmd0 . ' 2>&1', $output, $returnCode); // Appending  2>&1 to avoid leaking sterr
 			if ($returnCode !== 0) {
@@ -42,7 +42,7 @@ class InstallDeps implements IRepairStep {
 				$this->logger->error('Failed to create python venv: '.$cmd0.' returned '.trim(implode("\n", $output)));
 				throw new \Exception('Failed to create python venv: '.$cmd0.' returned '.trim(implode("\n", $output)));
 			}
-			$output = '';
+			$output = [];
 			$cmd1 = $env . ' ' . escapeshellcmd($python . 'python3') . ' ' . escapeshellcmd($python . 'pip3 ') . ' install pipx';
 			exec($cmd1 . ' 2>&1', $output, $returnCode); // Appending  2>&1 to avoid leaking sterr
 			if ($returnCode !== 0) {
@@ -50,7 +50,7 @@ class InstallDeps implements IRepairStep {
 				$this->logger->error('Failed to install pipx: '.$cmd1.' returned '.trim(implode("\n", $output)));
 				throw new \Exception('Failed to install pipx: '.$cmd1.' returned '.trim(implode("\n", $output)));
 			}
-			$output = '';
+			$output = [];
 			// "< 1.4" avoids https://github.com/python-poetry/poetry/issues/7611
 			$cmd2 = $env . ' PIPX_HOME=' . $venv .  ' ' . 'PIPX_BIN_DIR=' . $python . ' ' .escapeshellcmd($python . 'python3') . ' ' . escapeshellcmd($python . 'pipx') . ' install poetry';
 			exec($cmd2 . ' 2>&1', $output, $returnCode); // Appending  2>&1 to avoid leaking sterr
@@ -60,7 +60,7 @@ class InstallDeps implements IRepairStep {
 				throw new \Exception('Failed to install poetry: '.$cmd2.' returned '.trim(implode("\n", $output)));
 			}
 			chdir(dirname(__DIR__, 2).'/src-py');
-			$output = '';
+			$output = [];
 			$cmd3 = $env . ' ' . escapeshellcmd($python . 'poetry ') . ' install --no-root';
 			exec($cmd3 . ' 2>&1', $output, $returnCode); // Appending  2>&1 to avoid leaking sterr
 			if ($returnCode !== 0) {

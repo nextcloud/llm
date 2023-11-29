@@ -25,11 +25,19 @@ jobs:
       # do not stop on another job's failure
       fail-fast: false
       matrix:
+        php-version: [ '8.1', '8.2' ]
+        model: ['llama-2']
+        server-version: ['stable27', 'stable28', 'master']
         include:
           - php-version: '8.0'
             server-version: 'stable27'
+            model: 'llama-2'
           - php-version: '8.3'
             server-version: 'master'
+            model: 'gpt4all-falcon'
+          - php-version: '8.3'
+            server-version: 'master'
+            model: 'leo-hessianai'
 
     name: Test summarize command on ${{ matrix.server-version }} php@${{ matrix.php-version }}
 
@@ -111,7 +119,7 @@ jobs:
 
       - name: Download models
         run: |
-          ./occ llm:download-model llama-2
+          ./occ llm:download-model ${{ matrix.model }}
 
       - name: Run transcription
         run: |

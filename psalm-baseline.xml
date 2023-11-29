@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<files psalm-version="5.16.0@2897ba636551a8cb61601cc26f6ccfbba6c36591">
+  <!--
+	SPDX-FileCopyrightText: Marcel Klehr <mklehr@gmx.net>
+	SPDX-License-Identifier: CC0-1.0
+	-->
+  <file src="lib/Controller/AdminController.php">
+    <InvalidArrayAccess>
+      <code>$output[0]</code>
+    </InvalidArrayAccess>
+  </file>
+</files>
