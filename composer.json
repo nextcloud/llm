@@ -11,7 +11,7 @@
 	"require-dev": {
 		"phpunit/phpunit": "^9",
 		"nextcloud/ocp": "dev-master@dev",
-		"psalm/phar": "^4.10",
+		"psalm/phar": "5.x",
 		"nextcloud/coding-standard": "^1",
 		"friendsofphp/php-cs-fixer": "^3",
 		"symfony/console": "^v6.3.4"
