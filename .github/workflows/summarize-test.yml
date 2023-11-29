@@ -25,6 +25,9 @@ jobs:
       # do not stop on another job's failure
       fail-fast: false
       matrix:
+        php-version: [ '8.1', '8.2' ]
+        model: ['llama-2', 'gpt4all-falcon', 'leo-hessianai']
+        server-version: ['stable28', 'master']
         include:
           - php-version: '8.0'
             server-version: 'stable27'
@@ -111,7 +114,7 @@ jobs:
 
       - name: Download models
         run: |
-          ./occ llm:download-model llama-2
+          ./occ llm:download-model ${{ matrix.model }}
 
       - name: Run transcription
         run: |
