@@ -1,0 +1,10 @@
+{ "translations": {
+    "Formalize" : "Rəsmiləşdirin",
+    "Rephrase the text to be more formal and polite instead of casual." : "Təsadüfi deyil, daha rəsmi və nəzakətli olmaq üçün mətni yenidən ifadə edin.",
+    "Simplify" : "Sadələşdirin",
+    "Status" : "Status",
+    "Model settings" : "Model parametrləri",
+    "Choose the machine learning model to be used." : "İstifadə olunacaq maşın öyrənmə modelini seçin.",
+    "Recommended" : "Məsləhətlidir"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}
