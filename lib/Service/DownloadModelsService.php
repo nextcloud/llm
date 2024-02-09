@@ -19,11 +19,13 @@ class DownloadModelsService {
 	public const MODEL_LLAMA = 'llama-2';
 	public const MODEL_GPT4ALL_FALCON = 'gpt4all-falcon';
 	public const MODEL_LEO_HESSIANAI = 'leo-hessianai';
+	public const MODEL_NEURALBEAGLE = 'neuralbeagle';
 
 	public const MODELS = [
 		self::MODEL_LLAMA => 'https://download.nextcloud.com/server/apps/llm/llama-2-7b-chat-ggml/llama-2-7b-chat.Q4_K_M.gguf',
 		self::MODEL_GPT4ALL_FALCON => 'https://download.nextcloud.com/server/apps/llm/gpt4all-falcon-q4_0.gguf',
 		self::MODEL_LEO_HESSIANAI => 'https://download.nextcloud.com/server/apps/llm/leo-hessianai-13B-chat-bilingual-GGUF/leo-hessianai-13b-chat-bilingual.Q4_K_M.gguf',
+		self::MODEL_NEURALBEAGLE => 'https://download.nextcloud.com/server/apps/llm/neuralbeagle14-7b.Q4_K_M.gguf',
 	];
 
 	public function __construct(IClientService $clientService, bool $isCLI) {
