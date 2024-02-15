@@ -53,6 +53,12 @@ SPDX-License-Identifier: AGPL-3.0-or-later
 					@update:checked="onChange">
 					{{ 'Leo Hessianai (' + t('llm', 'Bilingual: English/German') + ')' }}
 				</NcCheckboxRadioSwitch>
+				<NcCheckboxRadioSwitch :checked.sync="settings['model']"
+					type="radio"
+					value="neuralbeagle"
+					@update:checked="onChange">
+					{{ 'Neural Beagle 14 7B (' + t('llm', 'Extended context length of 8k tokens') + ')' }}
+				</NcCheckboxRadioSwitch>
 			</p>
 			<p>{{ t('llm', 'To download the machine learning model, you need to excecute the occ command line interface of Nextcloud on your server terminal with the following command:') }}</p>
 			<p><code>occ llm:download-model {{ settings['model'] }}</code></p>
@@ -157,7 +163,7 @@ export default {
 			if (this.timeout) {
 				clearTimeout(this.timeout)
 			}
-			setTimeout(() => {
+			this.timeout = setTimeout(() => {
 				this.submit()
 			}, 1000)
 		},
