@@ -18,6 +18,7 @@ OC.L10N.register(
     "Choose the machine learning model to be used." : "Wählen Sie das zu verwendende Modell für maschinelles Lernen.",
     "Recommended" : "Empfohlen",
     "Bilingual: English/German" : "Zweisprachig: Englisch/Deutsch",
+    "Extended context length of 8k tokens" : "Erweiterte Kontextlänge von 8k Tokens",
     "To download the machine learning model, you need to excecute the occ command line interface of Nextcloud on your server terminal with the following command:" : "Um das Modell des maschinellen Lernens herunterzuladen, müssen Sie die occ-Befehlszeilenschnittstelle von Nextcloud auf Ihrem Serverterminal mit dem folgenden Befehl ausführen:",
     "Inference settings" : "Inferenzeinstellungen",
     "The number of threads to use for inference (more is faster)" : "Die Anzahl der Threads, die für die Inferenz verwendet werden sollen (mehr ist schneller)",

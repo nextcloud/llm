@@ -16,6 +16,7 @@
     "Choose the machine learning model to be used." : "選擇要使用的機器學習模型。",
     "Recommended" : "建議",
     "Bilingual: English/German" : "雙語：英文/德文",
+    "Extended context length of 8k tokens" : "擴充上下文長度至 8000 個權杖",
     "To download the machine learning model, you need to excecute the occ command line interface of Nextcloud on your server terminal with the following command:" : "要下載機器學習模型，您必須在您的伺服器終端機上使用 Nextcloud 的 occ 命令列介面執行以下指令：",
     "Inference settings" : "推理設定",
     "The number of threads to use for inference (more is faster)" : "用於推理的執行緒數量（愈多愈快）",
