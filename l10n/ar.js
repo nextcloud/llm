@@ -18,6 +18,7 @@ OC.L10N.register(
     "Choose the machine learning model to be used." : "إختَر نموذج التعلُّم الآلي الذي ترغب في استخدامه.",
     "Recommended" : "مُقترَحٌ",
     "Bilingual: English/German" : "ثنائي اللغة: إنجليزي/ألماني",
+    "Extended context length of 8k tokens" : "طول السياق الممتد يصل إلى 8 آلاف أَمَارَة token",
     "To download the machine learning model, you need to excecute the occ command line interface of Nextcloud on your server terminal with the following command:" : "لتنزيل نموذج التعلٌّم الآلي، تحتاج إلى تنفيذ أمر نكست كلاود السطري occ التالي على جهاز خادومك:",
     "Inference settings" : "إعدادات الاستدلال inference",
     "The number of threads to use for inference (more is faster)" : "عدد الخيوط threads المراد استخدامها للاستدلال (كلما زاد عددها، زادت سرعة الأداء)",

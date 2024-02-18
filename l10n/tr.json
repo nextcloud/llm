@@ -16,6 +16,7 @@
     "Choose the machine learning model to be used." : "Kullanılacak makine öğrenmesi modelini seçin.",
     "Recommended" : "Önerilen",
     "Bilingual: English/German" : "İki dilde: İngilizce/Almanca",
+    "Extended context length of 8k tokens" : "8k kodlarının genişletilmiş içerik uzunluğu",
     "To download the machine learning model, you need to excecute the occ command line interface of Nextcloud on your server terminal with the following command:" : "Makine öğrenmesi modelini indirmek için sunucu terminalinizde şu komutla Nextcloud occ komut satırı arayüzünü çalıştırmanız gerekir:",
     "Inference settings" : "Çıkarım ayarları",
     "The number of threads to use for inference (more is faster)" : "Çıkarım için kullanılacak işlem sayısı (arttıkça daha hızlı olur)",
