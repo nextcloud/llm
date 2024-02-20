@@ -18,6 +18,7 @@ OC.L10N.register(
     "Choose the machine learning model to be used." : "Изаберите модел машинског учења који ће се користити.",
     "Recommended" : "Препоручено",
     "Bilingual: English/German" : "Двојезично: енглески/немачки",
+    "Extended context length of 8k tokens" : "Проширена дужина контекста од 8К жетона",
     "To download the machine learning model, you need to excecute the occ command line interface of Nextcloud on your server terminal with the following command:" : "Да бисте преузели модел машинског учења, потребно је да у терминалу сервера извршите occ Nextcloud интерфејс у командној линији на следећи начин:",
     "Inference settings" : "Подешавања интерфејса",
     "The number of threads to use for inference (more is faster)" : "Број нити који се користи за закључивање (више је брже)",
