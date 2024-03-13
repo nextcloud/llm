@@ -16,6 +16,7 @@
     "Choose the machine learning model to be used." : "Escolha o modelo de aprendizado de máquina a ser usado.",
     "Recommended" : "Recomendado",
     "Bilingual: English/German" : "Bilíngue: Inglês/Alemão",
+    "Extended context length of 8k tokens" : "Comprimento de contexto estendido de 8 mil tokens",
     "To download the machine learning model, you need to excecute the occ command line interface of Nextcloud on your server terminal with the following command:" : "Para baixar o modelo de aprendizado de máquina, você precisa executar a interface de linha de comando occ do Nextcloud no terminal do servidor com o seguinte comando:",
     "Inference settings" : "Configurações de Inferência",
     "The number of threads to use for inference (more is faster)" : "O número de threads para utilizar na inferência (mais é mais rápido)",
