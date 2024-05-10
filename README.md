@@ -7,6 +7,8 @@ SPDX-License-Identifier: CC0-1.0
 
 # A large language model in Nextcloud
 
+**Note: This app is deprecated and no longer being maintained. Its successor is https://github.com/nextcloud/llm2**
+
 This app ships a TextProcessing provider using a Large Language Model that runs locally on CPU
 
 The models run completely on your machine. No private data leaves your servers.
